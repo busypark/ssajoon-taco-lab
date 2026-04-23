@@ -11,3 +11,4 @@
 |---|---|
 | `1) research full_dataset.ipynb` | TACO 전체 데이터셋 탐색 및 통계 분석 |
 | `2) split 3 csv.ipynb` | TACO parquet → 3개 CSV 정규화 분리 |
+| `3) validate testcases.ipynb` | 솔루션 코드 실제 실행 검증 |
