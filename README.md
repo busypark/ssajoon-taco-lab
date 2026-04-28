@@ -1,6 +1,6 @@
 # TACO 데이터셋 기반 알고리즘 문제 변형 실험
 
-> **브랜치**: `exp/testcase-classification`
+> **브랜치**: `exp/testcase-classification` — TC 분류 포기, TC 생성으로 방향 전환 (pivot)
 
 ## 실험 환경
 
@@ -27,4 +27,4 @@ export GEMINI_API_KEY=AIzaSy...
 | `3) validate testcases.ipynb` | 솔루션 코드 실제 실행 검증 |
 | `4) validate testcases.ipynb` | 실행 결과 필터링 및 유효 문제 추출 |
 | `5) filter validation.ipynb` | 테스트케이스 수 기준 문제 필터링 |
-| `6) classfy testcases.ipynb` | 기존 TC 유형 분류 실험 (`exp/testcase-classification`) |
+| `6) classfy testcases.ipynb` | 기존 TC 유형 분류 실험 — 정확도·비용 이유로 포기 |
