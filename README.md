@@ -4,6 +4,17 @@
 
 - **컨테이너**: Docker (Linux)
 - **런타임**: Jupyter Notebook (Python 3.11)
+- **LLM**: Google Gemma 4 31B IT (`gemma-4-31b-it`) via Gemini API
+
+## 환경 변수 설정
+
+| 변수 | 사용 노트북 |
+|---|---|
+| `GEMINI_API_KEY` | `7) generate problems.ipynb` |
+
+```bash
+export GEMINI_API_KEY=AIzaSy...
+```
 
 ## 노트북 목록
 
@@ -14,3 +25,4 @@
 | `3) validate testcases.ipynb` | 솔루션 코드 실제 실행 검증 |
 | `4) validate testcases.ipynb` | 실행 결과 필터링 및 유효 문제 추출 |
 | `5) filter validation.ipynb` | 테스트케이스 수 기준 문제 필터링 |
+| `7) generate problems.ipynb` | SSAFY 테마 문제 변환 (Gemma) |
