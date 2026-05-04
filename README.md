@@ -26,3 +26,4 @@ export GEMINI_API_KEY=AIzaSy...
 | `4) validate testcases.ipynb` | 실행 결과 필터링 및 유효 문제 추출 |
 | `5) filter validation.ipynb` | 테스트케이스 수 기준 문제 필터링 |
 | `7) generate problems.ipynb` | SSAFY 테마 문제 변환 (Gemma) |
+| `8) concat problems.ipynb` | 분산 변환 결과 합산 및 품질 검증 |
