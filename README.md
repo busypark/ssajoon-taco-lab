@@ -10,7 +10,7 @@
 
 | 변수 | 사용 노트북 |
 |---|---|
-| `GEMINI_API_KEY` | `7) generate problems.ipynb`, `9) generate inputs.ipynb` |
+| `GEMINI_API_KEY` | `7) generate problems.ipynb`, `9) generate inputs.ipynb`, `10) classify algorithms.ipynb` |
 
 ```bash
 export GEMINI_API_KEY=AIzaSy...
@@ -28,3 +28,4 @@ export GEMINI_API_KEY=AIzaSy...
 | `7) generate problems.ipynb` | SSAFY 테마 문제 변환 (Gemma) |
 | `8) concat problems.ipynb` | 분산 변환 결과 합산 및 품질 검증 |
 | `9) generate inputs.ipynb` | 합성 테스트케이스 50개 생성 (Gemma) |
+| `10) classify algorithms.ipynb` | 문제 설명 기반 알고리즘 분류 |
