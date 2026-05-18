@@ -32,3 +32,4 @@ export GEMINI_API_KEY=AIzaSy...
 | `11) classify by solution.ipynb` | 솔루션 코드 기반 알고리즘 분류 (분산 워커 A) |
 | `12) classify by solution.ipynb` | 솔루션 코드 기반 알고리즘 분류 (분산 워커 B) |
 | `13) concat cls by sol.ipynb` | 솔루션-알고리즘 분류 결과 합산 |
+| `14) extract codeforces.ipynb` | codeforce 키워드 포함 문제 탐지 및 분리 |
