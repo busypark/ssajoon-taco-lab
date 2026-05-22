@@ -8,12 +8,24 @@
 
 ## 환경 변수 설정
 
+### 단일 키
+
 | 변수 | 사용 노트북 |
 |---|---|
 | `GEMINI_API_KEY` | `7) generate problems.ipynb`, `9) generate inputs.ipynb`, `10) classify algorithms.ipynb`, `11) classify by solution.ipynb`, `12) classify by solution.ipynb` |
 
 ```bash
 export GEMINI_API_KEY=AIzaSy...
+```
+
+### 다중 키 (`16) testcase rangeVal.ipynb`)
+
+멀티프로세스 구조로 API 키 17개를 큐로 분배합니다.
+
+```bash
+export GEMINI_API_KEY_1=AIzaSy...
+export GEMINI_API_KEY_2=AIzaSy...
+# ... (GEMINI_API_KEY_17까지)
 ```
 
 ## 노트북 목록
@@ -34,3 +46,4 @@ export GEMINI_API_KEY=AIzaSy...
 | `13) concat cls by sol.ipynb` | 솔루션-알고리즘 분류 결과 합산 |
 | `14) extract codeforces.ipynb` | codeforce 키워드 포함 문제 탐지 및 분리 |
 | `15) overwrite, time, memory.ipynb` | 시간/메모리 제한 파싱 및 TC 전처리 |
+| `16) testcase rangeVal.ipynb` | LLM 기반 TC 입력 범위 검증 |
