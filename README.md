@@ -47,3 +47,4 @@ export GEMINI_API_KEY_2=AIzaSy...
 | `14) extract codeforces.ipynb` | codeforce 키워드 포함 문제 탐지 및 분리 |
 | `15) overwrite, time, memory.ipynb` | 시간/메모리 제한 파싱 및 TC 전처리 |
 | `16) testcase rangeVal.ipynb` | LLM 기반 TC 입력 범위 검증 |
+| `17) print rangeVal.ipynb` | 범위 검증 결과 수동 확인 뷰어 |
