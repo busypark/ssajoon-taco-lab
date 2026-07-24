@@ -1,0 +1,3 @@
+{"event": "start", "batch_size": 1, "total_chunks": 1, "n_problems": 33, "workers": 9}
+{"event": "chunk_done", "problem_id": "1475_D", "solution_indices": [15], "ok": false, "error": "ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ", "attempts": 3, "call_elapsed_s": 17.2, "progress": "1/1", "ok_so_far": "0/1", "total_elapsed_s": 17.2}
+{"event": "done", "total": 1, "ok": 0, "total_elapsed_s": 18.2}

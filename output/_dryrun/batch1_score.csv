@@ -1,0 +1,1654 @@
+﻿problem_solution_key,no,source,id,title,rating,difficulty,official_tags,time_limit_ms,memory_limit_mb,testcase_count,checker_status,selected_language,selected_submission_index,description,source_url,solution_column,solution_index,is_selected_solution,solution_valid,solution_language,solution_length,solution_summary,IMPLEMENTATION,SIMULATION,GRID_SIMULATION,EVENT_SIMULATION,STATE_SIMULATION,BRUTE_FORCE,BACKTRACKING,PERMUTATION_SEARCH,COMBINATION_SEARCH,BRANCH_AND_BOUND,SORTING,CUSTOM_SORTING,COUNTING_SORT,BINARY_SEARCH,PARAMETRIC_SEARCH,BOUND_SEARCH,TWO_POINTERS,SLIDING_WINDOW,FIXED_WINDOW,VARIABLE_WINDOW,PREFIX_SUM,PREFIX_SUM_2D,DIFFERENCE_ARRAY,IMOS,HASH,HASH_MAP,HASH_SET,STRING_HASHING,STACK,MONOTONIC_STACK,QUEUE,DEQUE,MONOTONIC_QUEUE,HEAP,PRIORITY_QUEUE,HEAP_GREEDY,BFS,DFS,GRAPH_TRAVERSAL,GRID_TRAVERSAL,FLOOD_FILL,CONNECTED_COMPONENTS,MULTI_SOURCE_BFS,STATE_SPACE_SEARCH,DIJKSTRA,BELLMAN_FORD,FLOYD_WARSHALL,ZERO_ONE_BFS,SHORTEST_PATH_DAG,UNION_FIND,MST,KRUSKAL,PRIM,TOPO_SORT,TOPO_SORT_DP,DP,DP_1D,DP_2D,GRID_DP,KNAPSACK_DP,INTERVAL_DP,BITMASK_DP,TREE_DP,DP_ON_DAG,DIGIT_DP,LIS,LCS,EDIT_DISTANCE,GREEDY,SORTING_GREEDY,HEAP_GREEDY,INTERVAL_GREEDY,TREE,TREE_TRAVERSAL,LCA,EULER_TOUR,TREE_DIAMETER,SUBTREE_QUERY,SEGMENT_TREE,LAZY_SEGMENT_TREE,FENWICK_TREE,RANGE_SUM_QUERY,RANGE_MIN_QUERY,COORD_COMP_SEGMENT,DYNAMIC_SEGMENT_TREE,TRIE,BINARY_TRIE,STRING,KMP,PALINDROME,MANACHER,AHO_CORASICK,MATH,NUMBER_THEORY,GCD_LCM,PRIME_CHECK,SIEVE,MODULAR_ARITHMETIC,FAST_POWER,MODULAR_INVERSE,COMBINATORICS,INCLUSION_EXCLUSION,PROBABILITY,EXPECTED_VALUE,GAME_THEORY,GEOMETRY,CCW,LINE_SEGMENT_INTERSECTION,CONVEX_HULL,POLYGON_AREA,BITMASK,BITMASK_BRUTE_FORCE,BITMASK_DP,BIT_MANIPULATION,SUBSET_ENUMERATION,DIVIDE_AND_CONQUER,SWEEP_LINE,COORDINATE_COMPRESSION,OFFLINE_QUERY,MEET_IN_THE_MIDDLE,SPARSE_TABLE,UNKNOWN,primary_algorithm,primary_score,secondary_algorithms,is_composite,composite_algorithm,top_3_algorithms,code_evidence,time_complexity_reasoning,classification_reason,rejected_candidates,confidence,uncertain_points,compared_with_other_solutions
+1475_D_solution_4,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_4,4,False,True,Java,274,"편의성 점수(1점, 2점)별로 애플리케이션을 분리하고 각각 메모리 내림차순 정렬 후, 2점짜리 앱의 선택 개수를 고정하며 1점짜리 앱의 최소 필요 개수를 이분 탐색으로 찾는 풀이",50,0,0,0,0,0,0,0,0,0,90,60,0,95,0,85,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,BINARY_SEARCH | PREFIX_SUM | SORTING,True,GREEDY | BINARY_SEARCH,GREEDY:95 | BINARY_SEARCH:95 | PREFIX_SUM:95,"solution_4 기준: b[i]가 1인 그룹(x)과 2인 그룹(y)을 나누어 각각 내림차순 정렬 후 prefix sum을 생성함. 이후 2점짜리 앱을 i개 선택했을 때 필요한 나머지 메모리(m-sum)를 x 배열에서 moreq(x, m-sum)라는 이분 탐색 함수를 통해 최소 개수를 찾음.","각 그룹을 정렬하는 데 O(N log N), 2점짜리 앱의 개수(최대 N)를 순회하며 이분 탐색을 수행하는 데 O(N log N)이 소요되어 전체 O(N log N)으로 시간 제한 내에 통과함.","solution_4를 분석했다. 최소 비용을 구하기 위해 각 비용 그룹 내에서 메모리가 가장 큰 것부터 선택하는 Greedy 전략을 사용한다. 2점 그룹의 선택 개수를 고정하면 1점 그룹에서 필요한 최소 개수를 찾아야 하는데, 이를 효율적으로 수행하기 위해 정렬된 prefix sum 배열 위에서 Binary Search를 사용한다. 따라서 Greedy, Prefix Sum, Binary Search가 모두 핵심적인 역할을 하는 복합 알고리즘 풀이이다.","DP: 문제의 구조가 Knapsack과 유사하여 DP를 생각할 수 있으나, m이 10^9로 매우 커서 DP 배열 생성이 불가능하며 Greedy+BS로 해결했다. TWO_POINTERS: 정렬된 두 배열을 다루므로 투포인터가 가능해 보이지만, 코드에서는 명시적으로 이분 탐색을 사용했다.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_2,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_2,2,True,True,Java,434,"앱을 점수별(1점, 2점)로 분리하여 메모리 내림차순으로 정렬한 뒤, 1점 앱의 선택 개수를 순회하며 부족한 메모리를 2점 앱의 누적합 배열에서 이분 탐색으로 찾아 최솟값을 갱신하는 풀이",60,0,0,0,0,0,0,0,0,0,90,0,0,95,0,90,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,95,GREEDY | PREFIX_SUM | SORTING,True,BINARY_SEARCH | GREEDY,BINARY_SEARCH:95 | SORTING:90 | PREFIX_SUM:90,"solution_2 기준: `Collections.sort(ones, Collections.reverseOrder())`로 메모리 큰 순 정렬, `twoarr[i] = twoarr[i]+twoarr[i-1]`로 2점 앱 누적합 생성, `while(l<=r)` 루프 내에서 `twoarr[mid]+oneSum>=m` 조건을 통해 필요한 2점 앱의 최소 개수를 이분 탐색으로 찾음","두 리스트의 정렬에 O(N log N), 1점 앱 리스트 순회 중 2점 앱 누적합 배열에 대해 이분 탐색을 수행하므로 O(N log N)의 시간복잡도를 가짐","이 문제는 제한된 비용(점수) 내에서 최대 메모리를 확보하는 문제로, 각 점수대별로 메모리가 큰 앱부터 선택하는 그리디 전략이 필수적이다. solution_2는 이를 위해 정렬과 누적합을 사용했으며, 1점 앱의 개수를 고정했을 때 필요한 2점 앱의 최소 개수를 찾는 과정을 이분 탐색으로 효율적으로 구현했으므로 BINARY_SEARCH를 primary로, GREEDY와 PREFIX_SUM을 보조 알고리즘으로 분류한다.","TWO_POINTERS: 1점 앱의 개수가 늘어남에 따라 필요한 2점 앱의 개수는 감소하므로 투포인터로 최적화 가능하지만, 본 코드는 이분 탐색을 사용함. DP: Knapsack 형태처럼 보일 수 있으나 점수 값이 1, 2로 매우 제한적이어서 그리디+탐색으로 해결 가능함",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_5,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_5,5,False,True,Python,38,"가중치(b_i)가 1인 앱과 2인 앱을 분리하여 각각 내림차순 정렬한 뒤, b=2인 앱의 개수를 고정하고 b=1인 앱의 최소 필요 개수를 이분 탐색으로 찾아 최솟값을 갱신하는 풀이",50,0,0,0,0,0,0,0,0,0,85,0,0,95,0,70,0,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,95,GREEDY | SORTING | PREFIX_SUM,True,GREEDY | BINARY_SEARCH,BINARY_SEARCH:95 | GREEDY:90 | SORTING:85,"solution_5 기준: a1.sort(reverse=True)와 a2.sort(reverse=True)로 내림차순 정렬 후, a1의 누적합을 계산하고 while r>l+1 루프를 통해 필요한 a1의 개수(r)를 이분 탐색함","앱을 두 그룹으로 나눠 정렬하는 데 O(N log N), 이후 한 그룹을 순회하며 다른 그룹의 누적합 배열에서 이분 탐색을 수행하므로 O(N log N)에 처리함","solution_5를 분석했다. 메모리를 최소 비용으로 확보하기 위해 각 그룹에서 메모리 용량이 큰 앱부터 선택하는 GREEDY 전략을 사용했다. 이를 효율적으로 구현하기 위해 누적합(PREFIX_SUM)을 이용하고, 특정 비용(b=2)을 고정했을 때 필요한 나머지 메모리를 채울 최소한의 b=1 앱 개수를 BINARY_SEARCH로 빠르게 찾아내어 전체 시간복잡도를 O(N log N)으로 최적화했다. 단순 구현이나 전수 조사가 아닌 이분 탐색 구조가 시간복잡도 통과의 핵심이므로 BINARY_SEARCH를 primary로 선정했다.","TWO_POINTERS: 이 문제는 투포인터로도 풀 수 있으나, 해당 코드는 명확하게 이분 탐색 루프를 구현함. DP: 메모리 제한이 크고 b_i 값이 매우 제한적이어서 DP보다는 그리디+탐색 접근이 적절함.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_3,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_3,3,False,True,C++,92,"가중치가 1인 앱과 2인 앱을 분리하여 메모리 크기순으로 내림차순 정렬한 뒤, 투 포인터를 사용하여 최소 가중치 합을 구하는 풀이",40,0,0,0,0,0,0,0,0,0,90,80,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,TWO_POINTERS | SORTING,True,GREEDY | TWO_POINTERS,GREEDY:95 | SORTING:90 | TWO_POINTERS:85,"solution_3 기준: 가중치 1(a[])과 2(b[])인 앱을 분리해 내림차순 정렬하고, while(ans>=m && i>=0) 루프를 통해 가중치 2인 앱을 추가함에 따라 가중치 1인 앱의 선택 개수를 줄여나가는 투 포인터 구조를 사용함","두 그룹의 정렬에 O(N log N)이 소요되며, 이후 가중치 2인 앱을 순회하며 가중치 1인 앱의 인덱스 i를 조정하는 과정은 선형 시간 O(N)에 수행되므로 전체 시간복잡도는 O(N log N)임","가중치가 낮은 앱부터 메모리 효율이 좋은(메모리가 큰) 순서대로 선택하는 그리디 전략이 핵심이며, 이를 효율적으로 구현하기 위해 정렬과 투 포인터 기법을 결합함. 단순히 정렬만으로는 모든 조합을 확인할 수 없으므로, 가중치 2인 앱의 개수를 고정했을 때 최적의 가중치 1인 앱 개수를 찾는 투 포인터 구조가 시간복잡도를 결정함","DP: 메모리 요구량 m이 매우 커서(10^9) 전형적인 배낭 문제(Knapsack) 형태의 DP로는 해결이 불가능함. BINARY_SEARCH: 정답의 단조성을 이용해 이분 탐색으로 풀 수도 있으나, 본 코드는 투 포인터로 구현됨",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_1,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_1,1,False,True,Java,215,"비용(b_i)이 1인 그룹과 2인 그룹으로 나누어 메모리 크기순으로 정렬한 후, 1인 그룹을 선택하는 개수를 고정하고 필요한 나머지 메모리를 2인 그룹의 누적합 배열에서 이분 탐색으로 찾는 풀이",40,0,0,0,0,0,0,0,0,0,90,0,0,85,0,0,0,0,0,0,70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,SORTING | BINARY_SEARCH | PREFIX_SUM,True,GREEDY | BINARY_SEARCH,GREEDY:95 | SORTING:90 | BINARY_SEARCH:85,"solution_1 기준: b[i]에 따라 ones, twos 리스트로 분리 후 sort(null)로 정렬함. twos 리스트의 역순 누적합을 ll에 저장하고, ones 리스트를 순회하며 req = m - sum 에 대해 while(lo <= hi) 루프를 통해 이분 탐색을 수행함.","각 비용 그룹별 정렬에 O(N log N), 누적합 계산 O(N), 그리고 ones 그룹 순회 중 이분 탐색을 수행하여 총 O(N log N)의 시간복잡도로 해결함.","solution_1을 분석했다. 최소 비용으로 m 이상의 메모리를 확보하기 위해, 각 비용(1점, 2점) 내에서 메모리가 가장 큰 앱부터 선택하는 그리디 전략을 사용한다. 비용 1인 앱을 k개 선택했을 때 필요한 나머지 메모리를 비용 2인 앱들 중에서 가장 적은 개수로 채우기 위해, 비용 2인 앱들의 메모리 누적합을 미리 구해두고 이분 탐색으로 최적의 개수를 찾는다. 이 과정에서 정렬과 이분 탐색이 시간복잡도 통과를 위한 핵심 도구로 사용되었으므로 GREEDY를 primary로, SORTING과 BINARY_SEARCH를 주요 보조 알고리즘으로 분류한다.","DP: 공식 태그에는 포함되어 있으나, 해당 코드는 상태 전이나 점화식 없이 그리디와 이분 탐색만으로 풀이함. TWO_POINTERS: 이분 탐색 대신 투포인터로 최적화 가능하나 실제 구현은 이분 탐색을 사용함.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_9,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_9,9,False,True,Java,344,"b=1인 앱과 b=2인 앱을 분리하여 정렬한 뒤, 투포인터를 사용하여 최소 비용으로 m 이상의 메모리를 확보하는 풀이",50,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TWO_POINTERS,95,GREEDY | SORTING,True,TWO_POINTERS | GREEDY,TWO_POINTERS:95 | SORTING:90 | GREEDY:90,"solution_9 기준: `on`(b=1)과 `tw`(b=2) 배열을 정렬한 뒤, `for` 루프로 `on` 배열의 큰 값부터 추가하고, `while` 루프로 `tw` 배열의 작은 값부터 제거하며 `sum >= m` 조건을 유지하는 투포인터 구조를 구현함.","두 배열의 정렬에 O(N log N)이 소요되며, 이후 두 포인터 `j`와 `y`가 각각의 배열을 최대 한 번씩 순회하므로 O(N)이 소요됨. 따라서 전체 시간복잡도는 O(N log N)임.","이 문제는 b=1과 b=2인 그룹으로 나누어 각각 최적의 원소를 선택하는 그리디 전략이 필요하며, 한 그룹의 선택 개수를 늘릴 때 다른 그룹의 선택 개수를 줄여 최적점을 찾는 과정이 투포인터 방식으로 최적화되어 구현되었음.",DP: 부분 문제의 중복 계산이나 점화식 구조가 없음. BINARY_SEARCH: 정답 값의 범위를 이분 탐색하는 로직이 없음.,HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_7,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_7,7,False,True,Java,275,"비용(1, 2)별로 앱을 분리하여 내림차순 정렬한 뒤, 비용 2인 앱의 선택 개수를 순회하며 부족한 메모리를 비용 1인 앱의 누적합 배열에서 이분 탐색으로 찾는 풀이",50,0,0,0,0,0,0,0,0,0,95,0,0,90,0,90,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,90,SORTING | PREFIX_SUM | GREEDY,True,BINARY_SEARCH | PREFIX_SUM | SORTING,SORTING:95 | BINARY_SEARCH:90 | PREFIX_SUM:90,"solution_7 기준: Collections.sort(p1, Collections.reverseOrder())로 정렬하고, p1.set(i, p1.get(i) + p1.get(i-1))를 통해 누적합을 생성함. 이후 search 함수 내에서 while (lo <= hi) 루프를 통해 target 이상의 값이 처음 나타나는 위치를 찾는 lower_bound 형태의 이분 탐색을 수행함.","두 리스트를 정렬하는 데 O(N log N), 비용 2인 앱 리스트를 순회(최대 N번)하면서 비용 1인 앱의 누적합 배열에 대해 이분 탐색(O(log N))을 수행하므로 전체 시간복잡도는 O(N log N)임.","solution_7을 분석했다. 이 문제는 최소 비용으로 특정 메모리 양을 확보하는 그리디 문제이다. 비용이 1인 앱과 2인 앱을 분리하여 각각 메모리 용량이 큰 순서대로 정렬하는 것이 핵심 전략(GREEDY, SORTING)이다. 이후 한 쪽 비용의 선택 개수를 고정하고 다른 쪽에서 필요한 최소 개수를 찾을 때, 단순 선형 탐색이 아닌 누적합(PREFIX_SUM)과 이분 탐색(BINARY_SEARCH)을 결합하여 시간복잡도를 획기적으로 줄였다. 따라서 이 세 기법이 복합적으로 사용되어 정답 논리를 완성한다.","DP: 공식 태그에는 포함되어 있으나, 이 코드는 점화식을 정의하여 부분 문제를 해결하는 DP 구조가 아니라 그리디 전략과 이분 탐색을 사용함. TWO_POINTERS: 투포인터로도 해결 가능하지만, 실제 구현은 이분 탐색을 선택함.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_6,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_6,6,False,True,Java,223,"앱을 가치(1 또는 2)에 따라 분리하고 메모리 크기순으로 정렬한 뒤, 가치 1인 앱의 선택 개수를 순회하며 가치 2인 앱의 필요 개수를 이분 탐색으로 찾아 최소 비용을 계산하는 풀이",50,0,0,0,0,0,0,0,0,0,90,85,0,95,0,60,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,95,GREEDY | PREFIX_SUM | SORTING,True,GREEDY | BINARY_SEARCH,BINARY_SEARCH:95 | GREEDY:90 | PREFIX_SUM:90,"solution_6 기준: func.sort로 메모리를 정렬하고, mem[i][j] += mem[i][j-1]로 누적합을 구한 뒤, func.bing(mem[1], 0, f[1], req) 함수를 통해 필요한 가치 2 앱의 최소 개수를 이분 탐색으로 찾음","정렬에 O(N log N), 가치 1 앱의 개수를 순회하는 루프 N번 내부에서 이분 탐색 O(log N)을 수행하므로 전체 시간복잡도는 O(N log N)임","이 문제는 최소 비용으로 목표 메모리를 확보하는 문제로, 각 가치별로 메모리가 큰 앱부터 선택하는 Greedy 전략이 핵심이다. 이를 구현하기 위해 정렬과 누적합을 사용하였으며, 최종적으로 가치 1과 2 앱의 선택 조합을 최적화하기 위해 이분 탐색을 사용해 시간복잡도를 O(N log N)으로 낮췄으므로 GREEDY와 BINARY_SEARCH의 복합 알고리즘으로 분류한다.","TWO_POINTERS: 투포인터로도 풀 수 있는 문제이나, 이 코드는 명시적으로 binary search(func.bing)를 사용하여 구현함. DP: 메모리 확보량 m이 매우 크므로 일반적인 배낭 문제 형태의 DP는 불가능함.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_8,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_8,8,False,True,Python,47,"가중치 1과 2인 앱을 분리하여 메모리 내림차순으로 정렬한 뒤, 누적합과 투포인터를 이용해 최소 비용으로 목표 메모리를 확보하는 풀이",50,0,0,0,0,0,0,0,0,0,85,0,0,0,0,0,90,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,TWO_POINTERS | PREFIX_SUM | SORTING,True,GREEDY | TWO_POINTERS,GREEDY:95 | TWO_POINTERS:90 | PREFIX_SUM:85,"solution_8 기준: one, two 리스트를 reverse=True로 정렬하여 그리디하게 접근하였고, preone, pretwo 누적합 배열을 생성한 후, i가 감소함에 따라 j가 증가하는 while 루프(투포인터)를 통해 최적의 i+2j 비용을 계산함","정렬에 O(N log N)이 소요되며, 이후 누적합 생성과 투포인터 탐색 과정은 각각 O(N)으로 처리되어 전체 시간복잡도는 O(N log N)임",가중치별로 앱을 나누고 메모리가 큰 순서대로 선택하는 것은 전형적인 그리디 전략임. 선택할 가중치 1인 앱의 개수(i)를 결정했을 때 필요한 가중치 2인 앱의 개수(j)를 빠르게 찾기 위해 누적합과 투포인터 구조를 사용함. 정답 논리가 '가장 큰 값부터 선택한다'는 그리디 성질에 완전히 의존함,"DP: 메모리 요구량 m이 매우 커서 일반적인 배낭 문제 방식의 DP는 불가능하며, 가중치가 1, 2로 제한적이어서 그리디와 투포인터로 효율적인 해결이 가능함. BINARY_SEARCH: pretwo 배열에서 extra 이상의 값을 찾는 부분을 이분탐색으로 구현할 수 있었으나, 투포인터로 구현되어 더 효율적임",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_10,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_10,10,False,True,Python,26,"편의성 점수(b)에 따라 앱을 분류하고 정렬한 뒤, 투 포인터를 이용하여 최소 비용으로 메모리 m을 확보하는 풀이",40,0,0,0,0,0,0,0,0,0,95,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TWO_POINTERS,90,SORTING | GREEDY,True,TWO_POINTERS | SORTING,SORTING:95 | TWO_POINTERS:90 | GREEDY:85,"solution_10 기준: X.sort(reverse=True), Y.sort() 후 while i <= len(X) 루프 내에서 while j < len(Y) and suma-Y[j] >= m 구조를 통해 두 포인터 i, j를 이동시키며 최적해를 찾음","두 리스트 X, Y를 정렬하는 데 O(N log N)이 소요되며, 투 포인터 루프는 각 리스트의 요소를 최대 한 번씩만 방문하므로 O(N)에 처리되어 전체 시간복잡도는 O(N log N)임","편의성 점수가 1인 앱(X)과 2인 앱(Y)을 분리한 후, 각각 메모리 크기순으로 정렬하여 그리디하게 선택할 준비를 함. 이후 X의 선택 개수 i를 늘려가며 Y에서 최소한의 메모리만 유지하도록 포인터 j를 이동시키는 투 포인터 전략을 사용하여 최소 비용을 효율적으로 계산함. 정렬된 상태에서의 단조성을 이용하므로 투 포인터가 핵심 구조임","DP: 메모리 요구량 m이 최대 10^9로 매우 커서 일반적인 냅색 DP로는 해결 불가능함. BINARY_SEARCH: 이분 탐색으로도 풀 수 있는 문제이나, 해당 코드는 투 포인터로 구현함",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_12,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_12,12,False,True,Java,197,"비용이 1인 앱과 2인 앱을 분리하여 각각 내림차순 정렬 후, 누적합과 이분 탐색을 이용해 최소 비용으로 메모리 m을 확보하는 그리디 풀이",40,0,0,0,0,0,0,0,0,0,90,0,0,85,0,80,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,SORTING | PREFIX_SUM | BINARY_SEARCH,True,GREEDY | BINARY_SEARCH,GREEDY:95 | SORTING:90 | PREFIX_SUM:85,"solution_12 기준: Collections.sort(ones, Collections.reverseOrder())와 Collections.sort(twos, Collections.reverseOrder())를 통해 비용별로 가장 큰 메모리를 가진 앱부터 선택하며, 누적합 배열 생성 후 lowerBound() 함수를 통해 부족한 메모리를 채울 수 있는 최소한의 2점 앱 개수를 이분 탐색함.","정렬에 O(N log N), 누적합 생성에 O(N), 1점 앱의 개수를 순회하며 이분 탐색을 수행하는 루프에 O(N log N)이 소요되어 전체 시간복잡도는 O(N log N)임.","문제의 핵심은 최소 비용으로 메모리 m을 확보하는 것이다. 비용이 1과 2 두 종류뿐이므로, 각 비용 그룹 내에서 메모리 용량이 큰 앱을 우선적으로 선택하는 그리디 전략이 유효하다. 1점 앱을 k개 선택했을 때 남은 메모리를 2점 앱으로 어떻게 채울지를 누적합과 이분 탐색으로 효율적으로 계산함으로써 최적해를 찾는다.","DP: 전형적인 배낭 문제(Knapsack) 형태이나, 비용이 1, 2로 매우 제한적이어서 그리디와 이분 탐색만으로 해결 가능하며 DP를 사용하면 메모리와 시간 초과 위험이 있음.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_11,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_11,11,False,True,Java,349,"가중치 1과 2인 애플리케이션을 각각 최대 힙(PriorityQueue)으로 관리하며, 최소 비용으로 목표 메모리를 채우기 위해 1점짜리 2개와 2점짜리 1개를 비교 선택하는 그리디 알고리즘을 사용함.",40,0,0,0,0,0,0,0,0,0,40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,90,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,60,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,PRIORITY_QUEUE | HEAP,True,GREEDY | PRIORITY_QUEUE,GREEDY:95 | HEAP_GREEDY:95 | PRIORITY_QUEUE:90,"solution_11 기준: PriorityQueue ones와 twos를 사용하여 메모리가 큰 순서대로 추출하며, while(curFree < M) 루프 내에서 1점짜리 2개와 2점짜리 1개를 비교하여 최적의 선택을 하는 그리디 로직을 구현함.","각 원소를 우선순위 큐에 넣고 빼는 과정이 O(N log N)이며, 전체 루프는 최대 N번 실행되므로 시간 복잡도는 O(N log N)임.","solution_11은 각 가중치(1, 2)별로 메모리 크기를 내림차순으로 관리하며, 현재 상태에서 최소 비용으로 목표 메모리를 채우기 위한 최적의 선택(1점짜리 2개 vs 2점짜리 1개)을 반복하는 그리디 알고리즘을 사용함. 우선순위 큐는 이 그리디 선택을 효율적으로 수행하기 위한 도구임.","DP: 메모리 M이 매우 커서(10^9) 전형적인 냅색 DP로는 풀 수 없으며, 코드에도 점화식이 없음. BINARY_SEARCH: 정답의 단조성을 이용한 이분 탐색 구조가 없음.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_16,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_16,16,False,True,Java,197,"비용 1과 2인 애플리케이션을 각각 메모리 크기순으로 내림차순 정렬한 뒤, 투 포인터를 사용하여 최소 비용으로 목표 메모리를 확보하는 풀이",40,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,TWO_POINTERS,95,GREEDY | SORTING,True,GREEDY | TWO_POINTERS,TWO_POINTERS:95 | GREEDY:95 | SORTING:90,"solution_16 기준: Collections.sort() 및 reverse()를 통해 메모리 크기순으로 정렬하고, for 루프(i)와 while 루프(idx)를 사용하여 두 리스트의 합이 m 이상이 되는 최적의 지점을 탐색함","두 리스트의 정렬에 O(N log N)이 소요되며, 투 포인터 탐색 과정은 각 포인터가 최대 N번 이동하므로 O(N)에 처리되어 전체 시간복잡도는 O(N log N)임","비용이 1과 2로 제한되어 있으므로, 각 비용 그룹 내에서 메모리가 큰 것부터 선택하는 것이 항상 유리하다는 Greedy 전략을 사용한다. 이를 효율적으로 구현하기 위해 두 정렬된 리스트를 투 포인터로 훑으며 최소 비용 합을 계산하므로 TWO_POINTERS와 GREEDY가 핵심이다.",DP: 상태 전이나 점화식이 없으며 단순 그리디 선택으로 해결 가능함. BINARY_SEARCH: 정답 범위를 이분탐색하는 구조가 아님.,HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_14,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_14,14,False,True,Java,333,"애플리케이션을 가치(1점, 2점)별로 분리하여 내림차순 정렬한 뒤, 1점짜리 2개의 메모리 합과 2점짜리 1개의 메모리를 비교하며 그리디하게 선택하는 풀이",40,0,0,0,0,0,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,95,SORTING,True,SORTING | GREEDY,GREEDY:95 | SORTING:90 | SORTING_GREEDY:90,"solution_14 기준: Collections.sort(one, Collections.reverseOrder())와 Collections.sort(two, Collections.reverseOrder())로 메모리를 내림차순 정렬한 후, while(m>0) 루프 내에서 one.get(i)+one.get(i+1) > two.get(j) 조건을 통해 1점짜리 2개를 선택할지 2점짜리 1개를 선택할지 결정하는 그리디 구조를 가짐","정렬에 O(N log N)이 소요되며, 이후 메모리 m을 채우기 위해 리스트를 순회하는 그리디 루프가 O(N)에 처리되므로 전체 시간복잡도는 O(N log N)임","해당 솔루션은 메모리 효율(단위 가치당 메모리 양)을 극대화하기 위해 가치별로 분리한 뒤 내림차순 정렬하고, 매 순간 최선의 선택을 하는 그리디 전략을 사용함. 정렬 없이는 그리디 선택이 불가능하므로 SORTING이 필수적인 보조 알고리즘으로 작용함. 코드 내에 사용되지 않은 dijkstra나 dp 함수가 존재하지만 실제 main 로직은 그리디로 구현됨",DP: 클래스 내에 dp 함수가 정의되어 있으나 main 함수에서 호출되지 않음. BINARY_SEARCH: official_tags에는 있으나 실제 구현 코드에는 이분 탐색 로직이 없음,HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_18,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_18,18,False,True,Java,79,"앱을 가중치(1, 2)별로 분리하여 내림차순 정렬한 뒤, 가중치 1인 앱의 개수를 고정하고 가중치 2인 앱의 필요 개수를 누적합 배열 상에서 이분 탐색으로 찾아 최솟값을 갱신하는 풀이",60,0,0,0,0,0,0,0,0,0,90,0,0,90,0,0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,90,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,90,GREEDY | SORTING | PREFIX_SUM,True,GREEDY | BINARY_SEARCH,BINARY_SEARCH:90 | GREEDY:90 | SORTING:90,"solution_18 기준: Collections.sort(norm, Collections.reverseOrder())를 통해 가중치별 내림차순 정렬을 수행하고, sum_norm과 sum_imp 배열로 누적합을 계산한 뒤, while(l < r) 루프 내에서 sum_imp[mid] < rem 조건을 통해 이분 탐색을 수행함","두 그룹의 정렬에 O(N log N), 누적합 계산에 O(N), 가중치 1인 앱의 개수를 순회하며 이분 탐색을 수행하는 루프에 O(N log N)이 소요되어 전체 시간복잡도는 O(N log N)임","가중치가 1 또는 2로 제한되어 있으므로, 각 가중치 내에서 메모리 용량이 큰 앱부터 선택하는 것이 항상 최적이라는 Greedy 성질을 이용했다. 가중치 1인 앱을 i개 선택했을 때 필요한 나머지 메모리를 가중치 2인 앱들 중에서 최소 개수로 채우기 위해, 이미 정렬된 가중치 2 앱들의 누적합 배열에서 이분 탐색(Binary Search)을 수행하여 최적해를 찾는다. 따라서 정렬, 누적합, 이분 탐색이 결합된 구조이다.","TWO_POINTERS: 투 포인터로도 풀 수 있는 문제이나, 본 코드는 명백하게 이분 탐색 루프를 사용하고 있다. DP: 메모리 제한 m이 매우 커서 일반적인 배낭 문제 형태의 DP로는 해결이 불가능하며, 실제 코드에서도 DP 점화식이 없다.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_17,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_17,17,False,True,Java,92,"각 비용(1점, 2점)별로 메모리 크기를 내림차순 정렬한 뒤, 2점짜리 앱의 선택 개수를 고정하고 부족한 메모리를 1점짜리 앱의 누적합 배열에서 이분 탐색으로 찾아 최소 비용을 계산하는 풀이",60,0,0,0,0,0,0,0,0,0,90,0,0,90,0,70,0,0,0,0,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,100,BINARY_SEARCH | PREFIX_SUM | SORTING,True,GREEDY | BINARY_SEARCH,GREEDY:100 | BINARY_SEARCH:90 | PREFIX_SUM:90,"solution_17 기준: memory1과 memory2 리스트를 reverseOrder()로 정렬하고, memory1에 대해 누적합(prefix sum)을 계산한 뒤, Collections.binarySearch를 통해 필요한 최소한의 앱 개수를 탐색함","정렬에 O(N log N), memory2 리스트를 순회하며 memory1의 누적합 배열에서 이분 탐색을 수행하는 데 O(N log N)이 소요되어 전체 시간 복잡도는 O(N log N)임","이 문제는 각 비용(1점 또는 2점)당 최대한 많은 메모리를 확보하는 것이 최선인 그리디 구조를 가지고 있다. 2점짜리 앱을 k개 선택했을 때, 나머지 필요한 메모리를 1점짜리 앱들 중 가장 큰 것들부터 채우는 것이 최적이며, 이를 빠르게 찾기 위해 누적합과 이분 탐색을 사용했다. 따라서 핵심 논리는 GREEDY이며, 효율적인 탐색을 위해 BINARY_SEARCH와 PREFIX_SUM이 결합된 형태다.","DP: 메모리 요구량 m이 10^9로 매우 커서 일반적인 Knapsack DP는 불가능하며, 이 코드는 DP를 사용하지 않았다. TWO_POINTERS: memory2를 순회함에 따라 memory1의 필요 개수가 단조 감소하므로 투포인터로 최적화 가능하지만, 이 코드는 이분 탐색을 선택했다.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_13,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_13,13,False,True,Python,597,"정렬과 누적합을 이용해 특정 비용으로 확보 가능한 최대 메모리를 계산하고, 최소 비용을 찾기 위해 정답 값에 대해 이분 탐색(Parametric Search)을 수행하는 풀이입니다.",40,0,0,0,0,0,0,0,0,0,90,0,0,70,95,0,0,0,0,0,85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,PARAMETRIC_SEARCH,95,SORTING | PREFIX_SUM | GREEDY,True,PARAMETRIC_SEARCH | GREEDY,PARAMETRIC_SEARCH:95 | SORTING:90 | PREFIX_SUM:85,"solution_13 기준: one.sort(reverse=True)와 two.sort(reverse=True)로 메모리 기준 내림차순 정렬 후 w, w1 누적합 배열 생성. while(st<=end) 루프 내에서 mid 값을 기준으로 find(mid)를 호출하여 가능 여부를 판단하는 Parametric Search 구조를 가짐.","전체 앱 개수 N에 대해 정렬에 O(N log N), 정답의 범위(최대 2N)에 대한 이분 탐색 수행 시 O(log N)번의 단계가 있으며, 각 단계의 find 함수가 O(N)의 루프를 수행하므로 총 시간복잡도는 O(N log N)입니다.","최소 편의점 점수 손실이라는 정답의 최적값을 찾기 위해 이분 탐색을 수행하며, 각 점수(비용) x에 대해 얻을 수 있는 최대 메모리는 가장 큰 메모리를 가진 앱부터 그리디하게 선택함으로써 구할 수 있습니다. 이를 효율적으로 계산하기 위해 정렬과 누적합을 사용하였습니다.","DP: 공식 태그에는 포함되어 있으나, 이 코드는 상태 전이를 이용한 DP가 아닌 이분 탐색으로 풀이함. TWO_POINTERS: 정렬된 두 리스트를 사용하지만, binary search 내부에서 단순 루프로 모든 조합을 확인하므로 투포인터 기법을 사용했다고 보기 어려움.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_19,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_19,19,False,True,Java,55,"가치(b_i)가 1인 앱과 2인 앱을 분리하여 내림차순 정렬한 뒤, 누적합과 이분 탐색을 이용해 최소 가치 손실을 계산하는 풀이",40,0,0,0,0,0,0,0,0,0,80,0,0,90,0,0,0,0,0,0,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85,80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,BINARY_SEARCH,90,GREEDY | PREFIX_SUM | SORTING,True,GREEDY | BINARY_SEARCH,BINARY_SEARCH:90 | GREEDY:85 | PREFIX_SUM:80,"solution_19 기준: b=1, b=2인 앱을 나누어 Collections.reverseOrder()로 정렬하고 pref1, pref2 누적합 배열을 생성함. 이후 for문 내에서 while(l+1<r) 루프를 통한 이분 탐색으로 부족한 메모리를 채울 b=2 앱의 최소 개수 r을 찾음.","두 리스트의 정렬에 O(N log N)이 소요되며, b=1 리스트를 순회(O(N))하며 b=2 리스트의 누적합 배열에서 이분 탐색(O(log N))을 수행하므로 전체 시간복잡도는 O(N log N)임.","solution_19를 분석했다. 각 가치(b_i) 그룹 내에서 메모리가 큰 앱부터 제거하는 것이 최적이므로 그리디 전략을 사용한다. 이때 특정 개수의 b=1 앱을 선택했을 때 필요한 b=2 앱의 최소 개수를 효율적으로 찾기 위해 누적합 배열 위에서 이분 탐색을 수행한다. 정렬, 누적합, 이분 탐색의 결합이 시간복잡도와 정답 논리를 결정하므로 복합 알고리즘으로 분류한다.","TWO_POINTERS: 투포인터로도 해결 가능한 문제이나 해당 코드는 명시적으로 이분 탐색(Binary Search)을 구현함. DP: Knapsack 형태처럼 보일 수 있으나 가치가 1, 2로 제한되어 있어 그리디로 최적화 가능하며 코드에 DP 점화식이 없음.",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)
+1475_D_solution_20,5,Codeforces,1475_D,Cleaning the Phone,1800,Medium-Hard,"binary search, dp, sortings, two pointers",1000,256,11,PASS,cpp,2,"Polycarp often uses his smartphone. He has already installed n applications on it. Application with number i takes up a_i units of memory.
+
+Polycarp wants to free at least m units of memory (by removing some applications).
+
+Of course, some applications are more important to Polycarp than others. He came up with the following scoring system — he assigned an integer b_i to each application: 
+
+  * b_i = 1 — regular application; 
+  * b_i = 2 — important application. 
+
+
+
+According to this rating system, his phone has b_1 + b_2 + … + b_n convenience points.
+
+Polycarp believes that if he removes applications with numbers i_1, i_2, …, i_k, then he will free a_{i_1} + a_{i_2} + … + a_{i_k} units of memory and lose b_{i_1} + b_{i_2} + … + b_{i_k} convenience points.
+
+For example, if n=5, m=7, a=[5, 3, 2, 1, 4], b=[2, 1, 1, 2, 1], then Polycarp can uninstall the following application sets (not all options are listed below): 
+
+  * applications with numbers 1, 4 and 5. In this case, it will free a_1+a_4+a_5=10 units of memory and lose b_1+b_4+b_5=5 convenience points; 
+  * applications with numbers 1 and 3. In this case, it will free a_1+a_3=7 units of memory and lose b_1+b_3=3 convenience points. 
+  * applications with numbers 2 and 5. In this case, it will free a_2+a_5=7 memory units and lose b_2+b_5=2 convenience points. 
+
+
+
+Help Polycarp, choose a set of applications, such that if removing them will free at least m units of memory and lose the minimum number of convenience points, or indicate that such a set does not exist.
+
+Input
+
+The first line contains one integer t (1 ≤ t ≤ 10^4) — the number of test cases. Then t test cases follow.
+
+The first line of each test case contains two integers n and m (1 ≤ n ≤ 2 ⋅ 10^5, 1 ≤ m ≤ 10^9) — the number of applications on Polycarp's phone and the number of memory units to be freed.
+
+The second line of each test case contains n integers a_1, a_2, …, a_n (1 ≤ a_i ≤ 10^9) — the number of memory units used by applications.
+
+The third line of each test case contains n integers b_1, b_2, …, b_n (1 ≤ b_i ≤ 2) — the convenience points of each application.
+
+It is guaranteed that the sum of n over all test cases does not exceed 2 ⋅ 10^5.
+
+Output
+
+For each test case, output on a separate line: 
+
+  * -1, if there is no set of applications, removing which will free at least m units of memory; 
+  * the minimum number of convenience points that Polycarp will lose if such a set exists. 
+
+Example
+
+Input
+
+
+5
+5 7
+5 3 2 1 4
+2 1 1 2 1
+1 3
+2
+1
+5 10
+2 3 2 3 2
+1 2 1 2 1
+4 10
+5 1 3 4
+1 2 1 2
+4 5
+3 2 1 2
+2 1 2 1
+
+
+Output
+
+
+2
+-1
+6
+4
+3
+
+Note
+
+In the first test case, it is optimal to remove applications with numbers 2 and 5, freeing 7 units of memory. b_2+b_5=2.
+
+In the second test case, by removing the only application, Polycarp will be able to clear only 2 of memory units out of the 3 needed.
+
+In the third test case, it is optimal to remove applications with numbers 1, 2, 3 and 4, freeing 10 units of memory. b_1+b_2+b_3+b_4=6.
+
+In the fourth test case, it is optimal to remove applications with numbers 1, 3 and 4, freeing 12 units of memory. b_1+b_3+b_4=4.
+
+In the fifth test case, it is optimal to remove applications with numbers 1 and 2, freeing 5 units of memory. b_1+b_2=3.",https://codeforces.com/problemset/problem/1475/D,solution_20,20,False,True,Python,133,"비용이 1인 앱과 2인 앱을 분리하여 정렬한 후, 동일 비용 대비 최대 메모리를 확보하는 방향으로 그리디하게 선택하여 목표 메모리를 채우는 풀이",60,40,0,0,0,0,0,0,0,0,90,0,0,0,0,0,30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100,95,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,GREEDY,100,SORTING,True,SORTING | GREEDY,GREEDY:100 | SORTING:90 | IMPLEMENTATION:60,"solution_20 기준: s1, s2 리스트를 각각 내림차순 정렬하고, while 루프 내에서 s1[p] + s1[p+1]과 s2[q]를 비교하여 비용 2당 더 많은 메모리를 확보하는 선택지를 그리디하게 선택함","두 리스트의 정렬에 O(n log n)이 소요되며, 이후 메모리 m을 채우기 위한 while 루프 탐색은 O(n)에 수행되므로 전체 시간복잡도는 O(n log n)임","해당 코드는 비용이 1인 앱과 2인 앱을 분리하여 각각 정렬한 뒤, 동일한 비용 소모 시 더 큰 메모리 이득을 주는 조합을 우선적으로 선택하는 전형적인 그리디 알고리즘을 구현함. 정렬은 그리디 선택의 전제 조건이 되므로 핵심 보조 알고리즘으로 분류됨","DP: 상태 정의나 점화식 없이 단순 선택 구조로 해결함. TWO_POINTERS: p, q 포인터를 사용하지만 이는 리스트 순회용이며 투포인터 특유의 구간 최적화 논리는 아님",HIGH,,다른 solution과 비교 불가 (이번 호출 단위가 1개)

@@ -1,0 +1,525 @@
+﻿problem_solution_key,id,title,solution_column,solution_index,source_broad_tag,source_broad_score,BACKTRACKING,BFS,BINARY_SEARCH,BITMASK,BRUTE_FORCE,COMBINATORICS,DFS,DIJKSTRA,DP,FENWICK_TREE,GCD_LCM,GEOMETRY,GRAPH,GREEDY,MATH,MODULAR_ARITHMETIC,PARAMETRIC_SEARCH,PREFIX_SUM,PRIORITY_QUEUE,SEGMENT_TREE,SIEVE,SIMULATION,SORTING,STACK,TOPO_SORT,TREE,TWO_POINTERS,UNION_FIND,recheck_best_candidate,recheck_best_score,recheck_decision,recheck_reason
+1475_D_solution_3,1475_D,Cleaning the Phone,solution_3,3,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,95,0,TWO_POINTERS,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY 전략을 기반으로 하지만, 최적의 비용 1 앱 개수를 찾는 과정에서 투포인터(TWO_POINTERS) 구조가 시간복잡도와 풀이 구조의 핵심임"
+1475_D_solution_4,1475_D,Cleaning the Phone,solution_4,4,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY 전략을 사용하나, 누적합 배열 상에서 정답 후보를 찾는 핵심 메커니즘이 BINARY_SEARCH임"
+1475_D_solution_17,1475_D,Cleaning the Phone,solution_17,17,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"그리디하게 정렬한 후, 누적합 배열에서 최적의 지점을 BINARY_SEARCH로 찾는 것이 핵심 로직임"
+1475_D_solution_18,1475_D,Cleaning the Phone,solution_18,18,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,그리디 정렬 후 이분 탐색을 통해 최적해를 찾는 구조가 명확함
+1475_D_solution_7,1475_D,Cleaning the Phone,solution_7,7,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,그리디한 선택 이후 최적의 경계값을 찾는 과정에서 BINARY_SEARCH가 시간복잡도를 결정하는 핵심 기법으로 사용됨
+1475_D_solution_8,1475_D,Cleaning the Phone,solution_8,8,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,95,0,TWO_POINTERS,95,LIKELY_SPECIFIC_ALGORITHM,그리디 선택 이후 최적의 조합을 찾는 과정에서 투포인터 기법이 시간복잡도를 결정하는 핵심 기법으로 사용됨
+1475_D_solution_9,1475_D,Cleaning the Phone,solution_9,9,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,85,0,SORTING,90,KEEP_ORIGINAL,정렬 후 투 포인터를 사용하는 전형적인 그리디 최적화 문제임
+1475_D_solution_10,1475_D,Cleaning the Phone,solution_10,10,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,85,0,SORTING,90,KEEP_ORIGINAL,그리디하게 정렬 후 투 포인터로 최적해를 찾는 정석적인 풀이임
+1475_D_solution_1,1475_D,Cleaning the Phone,solution_1,1,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY 전략을 기반으로 하지만, 실제 구현에서 시간 복잡도를 결정하고 정답을 찾는 핵심 메커니즘은 BINARY_SEARCH임"
+1475_D_solution_2,1475_D,Cleaning the Phone,solution_2,2,GREEDY,90,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,전략은 Greedy이지만 시간 복잡도를 해결하는 구체적인 수단은 Binary Search임
+1475_D_solution_11,1475_D,Cleaning the Phone,solution_11,11,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,95,0,,,40,0,,,0,0,PRIORITY_QUEUE,95,LIKELY_SPECIFIC_ALGORITHM,GREEDY로 분류되었으나 PRIORITY_QUEUE(Heap)를 이용한 최댓값 추출이 풀이의 핵심 구조임
+1475_D_solution_12,1475_D,Cleaning the Phone,solution_12,12,GREEDY,70,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,40,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"넓은 의미의 그리디(가장 큰 것부터 선택) 기반이지만, 실제 구현의 핵심은 누적합 배열 상의 이분 탐색임"
+1475_D_solution_19,1475_D,Cleaning the Phone,solution_19,19,GREEDY,80,,,95,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"전체적인 전략은 그리디하지만, 실제 최적해를 결정하는 핵심 메커니즘은 누적합 배열상의 이분 탐색임"
+1475_D_solution_20,1475_D,Cleaning the Phone,solution_20,20,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,80,0,SORTING,90,KEEP_ORIGINAL,"명확한 그리디 선택 기준이 존재하며, 이를 통해 최적해를 보장하는 구조임"
+1475_D_solution_5,1475_D,Cleaning the Phone,solution_5,5,GREEDY,85,,,95,,,,,,20,0,,,0,,,,0,,0,0,,,85,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"While a greedy choice (largest memory first) is used, the core of the optimization is finding the minimal complement using binary search on prefix sums, which governs the time complexity."
+1475_D_solution_6,1475_D,Cleaning the Phone,solution_6,6,GREEDY,85,,,95,,,,,,20,0,,,0,,,,0,,0,0,,,90,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"The greedy sorting is a prerequisite, but the binary search on prefix sums is what solves the minimization problem efficiently."
+487_A_solution_1,487_A,Fight the Monster,solution_1,1,MATH,60,,,0,,100,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,100,KEEP_ORIGINAL,"단순 사칙연산과 올림 계산을 사용한 수학적 산출이며, 특정한 수학적 알고리즘(정수론 등)이 핵심은 아님."
+487_A_solution_2,487_A,Fight the Monster,solution_2,2,MATH,60,,,0,,100,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,100,KEEP_ORIGINAL,"전투 승리 조건을 만족하기 위한 산술 계산이 포함되어 있으나, 수학적 정리가 핵심인 문제는 아님."
+487_A_solution_3,487_A,Fight the Monster,solution_3,3,MATH,60,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,KEEP_ORIGINAL,"단순 사칙연산을 이용한 비용 계산이며, 전체 구조는 완전 탐색에 의존함"
+487_A_solution_4,487_A,Fight the Monster,solution_4,4,MATH,60,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,KEEP_ORIGINAL,"단순 수식 계산이며, 전체 구조는 BRUTE_FORCE임"
+487_A_solution_8,487_A,Fight the Monster,solution_8,8,DP,90,,,,,,,,,,,,,,,,,,,,,,,,,,,,,PREFIX_SUM,0,KEEP_ORIGINAL,
+487_A_solution_10,487_A,Fight the Monster,solution_10,10,MATH,70,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,KEEP_ORIGINAL,"필요 HP를 구하는 산술 계산이 포함되어 있으나, 이는 단순 수식 적용이며 특수 수학 알고리즘(정수론 등)은 아님"
+1367_C_solution_1,1367_C,Social Distance,solution_1,1,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+1367_C_solution_2,1367_C,Social Distance,solution_2,2,GREEDY,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+1367_C_solution_2,1367_C,Social Distance,solution_2,2,MATH,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+487_A_solution_16,487_A,Fight the Monster,solution_16,16,MATH,80,,,0,,100,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,100,KEEP_ORIGINAL,"필요 HP 계산을 위해 단순 나눗셈과 올림/내림 수식을 사용한 수준이며, 복잡한 정수론적 성질을 이용한 것은 아님"
+1367_C_solution_3,1367_C,Social Distance,solution_3,3,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"정렬, DP, 세그먼트 트리 등 더 구체적인 알고리즘이 필요하지 않은 단순 그리디 배치 문제임"
+1367_C_solution_4,1367_C,Social Distance,solution_4,4,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순 선형 탐색 기반의 그리디 배치 문제로 다른 특수 알고리즘의 개입 여지가 없음
+1367_C_solution_5,1367_C,Social Distance,solution_5,5,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,정렬이나 복잡한 자료구조 없이 단순히 순차적으로 최적의 선택을 하는 전형적인 그리디 풀이임.
+1367_C_solution_6,1367_C,Social Distance,solution_6,6,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,최적의 배치를 위한 거리 계산 자체가 그리디 전략의 수학적 구현임.
+1367_C_solution_6,1367_C,Social Distance,solution_6,6,MATH,95,,,0,,0,0,,,0,,0,0,,85,,0,0,,,,0,,,,,,,,GREEDY,85,KEEP_ORIGINAL,구간 거리를 이용한 나눗셈 계산이 풀이의 핵심이므로 MATH 태그가 적절함.
+1367_C_solution_7,1367_C,Social Distance,solution_7,7,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,특별한 보조 자료구조 없이 단순 순차 선택으로 최적해를 구하는 그리디 방식이 적절함
+1367_C_solution_8,1367_C,Social Distance,solution_8,8,GREEDY,80,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,수식 기반 계산 자체가 그리디한 선택의 결과물을 한 번에 구하는 것이므로 적절함
+1367_C_solution_8,1367_C,Social Distance,solution_8,8,MATH,95,,,0,,0,0,,,0,,0,0,,80,,0,0,,,,0,,,,,,,,GREEDY,80,KEEP_ORIGINAL,단순 산술 계산이지만 문제 해결의 핵심이 수식 도출에 있으므로 MATH가 적절함
+1367_C_solution_9,1367_C,Social Distance,solution_9,9,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,"가장 왼쪽에 배치하는 단순 탐욕 전략이 최적이며, 다른 복잡한 자료구조나 알고리즘이 필요하지 않음"
+1367_C_solution_10,1367_C,Social Distance,solution_10,10,GREEDY,90,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,수식 자체가 탐욕적인 최적 배치를 계산하는 것이므로 GREEDY가 적절함
+1367_C_solution_10,1367_C,Social Distance,solution_10,10,MATH,85,,,0,,0,0,,,0,,0,0,,90,,0,0,,,,0,,,,,,,,GREEDY,90,KEEP_ORIGINAL,"사칙연산과 몫 연산을 이용한 거리 계산이 핵심이므로 MATH 태그가 적절하며, 이는 GREEDY 전략을 구현하기 위한 수단임"
+1367_C_solution_11,1367_C,Social Distance,solution_11,11,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"전형적인 구간 채우기 그리디 문제이며, 다른 구체적인 자료구조나 알고리즘 없이 단순 산술 계산으로 해결됩니다."
+1367_C_solution_11,1367_C,Social Distance,solution_11,11,MATH,70,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,단순 나눗셈 연산이 포함되어 있으나 핵심 논리는 그리디한 배치 전략에 있습니다.
+1367_C_solution_12,1367_C,Social Distance,solution_12,12,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"전형적인 그리디 문제이며, 단순 반복문과 산술 연산으로 최적해를 구할 수 있습니다."
+1367_C_solution_12,1367_C,Social Distance,solution_12,12,MATH,70,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,"정수 나눗셈을 통한 개수 계산이 포함되어 있으나, 핵심은 그리디한 배치 전략입니다."
+1367_C_solution_15,1367_C,Social Distance,solution_15,15,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,"가장 앞단부터 채워 나가는 방식이 명확한 최적해를 제공하며, 다른 구체적 알고리즘이 필요하지 않음"
+1367_C_solution_16,1367_C,Social Distance,solution_16,16,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,구간 내 최대 배치 수를 구하는 단순 그리디 계산임
+1367_C_solution_16,1367_C,Social Distance,solution_16,16,MATH,60,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,구간 길이 기반의 단순 산술 계산임
+1367_C_solution_19,1367_C,Social Distance,solution_19,19,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,20,0,TWO_POINTERS,20,KEEP_ORIGINAL,구체적인 자료구조 없이 단순 산술 계산 기반의 그리디 선택이 최적임을 알 수 있다.
+1367_C_solution_19,1367_C,Social Distance,solution_19,19,MATH,60,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,"단순 나눗셈 수준의 산술 연산이며, 핵심은 배치 전략(Greedy)에 있다."
+1367_C_solution_20,1367_C,Social Distance,solution_20,20,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"누적합은 단순 검증 도구이며, 핵심 논리는 그리디한 배치에 있다."
+1367_C_solution_13,1367_C,Social Distance,solution_13,13,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"전형적인 간격 최적화 Greedy 문제이며, 다른 구체적인 알고리즘으로 대체할 필요 없이 수식으로 완결됨"
+1367_C_solution_13,1367_C,Social Distance,solution_13,13,MATH,90,,,0,,0,40,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,"단순한 나눗셈 기반의 간격 계산이므로 MATH 태그가 적절하며, 핵심 논리는 GREEDY에 기반함"
+1367_C_solution_14,1367_C,Social Distance,solution_14,14,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"가장 왼쪽부터 배치하는 단순 Greedy 전략이 최적해를 보장하며, 이를 충실히 구현함"
+1367_C_solution_17,1367_C,Social Distance,solution_17,17,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"단순한 수식 기반의 그리디 배치 문제로, 다른 구체적인 알고리즘으로 대체될 여지가 없음"
+1367_C_solution_17,1367_C,Social Distance,solution_17,17,MATH,90,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,"단순 산술 연산(나눗셈, 몫)을 통한 개수 계산이므로 MATH 태그가 적절함"
+1367_C_solution_18,1367_C,Social Distance,solution_18,18,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,전형적인 그리디 배치 및 단순 산술 문제임
+1367_C_solution_18,1367_C,Social Distance,solution_18,18,MATH,90,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,구간 길이 기반의 단순 나눗셈 연산이므로 MATH가 적절함
+487_A_solution_20,487_A,Fight the Monster,solution_20,20,MATH,85,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,KEEP_ORIGINAL,"필요 HP를 구하는 수식이 핵심적이지만, 전체 풀이의 틀은 브루트포스임"
+1037_C_solution_3,1037_C,Equalize,solution_3,3,GREEDY,95,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,"인접 원소 간의 단순 선택 문제이며, 상태 전이가 필요 없는 전형적인 그리디 문제임"
+1037_C_solution_4,1037_C,Equalize,solution_4,4,GREEDY,95,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,단순 인접 원소 비교를 통한 최적 선택 문제로 그리디가 가장 적절함
+1037_C_solution_1,1037_C,Equalize,solution_1,1,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,"단순한 인접 요소 결정 문제로, 다른 구체적인 알고리즘이 개입될 여지가 없는 전형적인 그리디 문제임"
+1037_C_solution_2,1037_C,Equalize,solution_2,2,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,인접한 두 요소의 최적 선택을 통해 전체 최적을 달성하는 전형적인 그리디 구조임
+1037_C_solution_5,1037_C,Equalize,solution_5,5,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,인접 원소의 상태에 따른 단순 그리디 선택이 최적임이 보장됨
+1037_C_solution_6,1037_C,Equalize,solution_6,6,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,인접 원소 기반의 단순 그리디 선택이 최적임
+1037_C_solution_7,1037_C,Equalize,solution_7,7,GREEDY,90,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,인접한 불일치 쌍을 즉시 해결하는 전형적인 그리디 전략임
+1037_C_solution_8,1037_C,Equalize,solution_8,8,GREEDY,100,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,40,0,TWO_POINTERS,40,KEEP_ORIGINAL,인접 요소의 국소적 최적 선택이 전체 최적해를 보장하는 전형적인 그리디 문제임
+1037_C_solution_9,1037_C,Equalize,solution_9,9,GREEDY,95,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,인접한 요소 간의 최적 선택이 전체 최적해를 결정하는 전형적인 그리디 문제임
+1037_C_solution_10,1037_C,Equalize,solution_10,10,GREEDY,95,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,인접 요소 간의 최적 선택을 반복하는 전형적인 그리디 구조임
+1037_C_solution_13,1037_C,Equalize,solution_13,13,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,"인접 요소 간의 선택 문제이며, 단순 그리디로 최적해가 보장되는 구조임"
+1037_C_solution_14,1037_C,Equalize,solution_14,14,GREEDY,80,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,불완전하지만 그리디한 선택을 통해 문제를 해결하려는 의도가 명확함
+1037_C_solution_15,1037_C,Equalize,solution_15,15,GREEDY,95,,,0,,,,,,30,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,30,KEEP_ORIGINAL,"단순한 인접 원소 결정 문제로, 복잡한 DP 없이 그리디한 선택만으로 최적해가 보장됨"
+1037_C_solution_16,1037_C,Equalize,solution_16,16,GREEDY,95,,,0,,,,,,30,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,30,KEEP_ORIGINAL,"단순한 인접 원소 처리 문제로, 그리디 전략이 최적해를 보장함"
+1037_C_solution_11,1037_C,Equalize,solution_11,11,GREEDY,95,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,인접 요소 간의 단순 선택 문제로 그리디 전략이 최적임을 증명할 수 있음
+1037_C_solution_12,1037_C,Equalize,solution_12,12,GREEDY,95,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,단순 인접 요소 비교를 통한 최적 선택 문제이므로 그리디가 가장 적절함
+1037_C_solution_19,1037_C,Equalize,solution_19,19,GREEDY,95,,,0,,,,,,30,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,30,KEEP_ORIGINAL,인접한 원소 간의 최적 선택이 전체 최적해를 보장하는 전형적인 그리디 문제임
+1037_C_solution_20,1037_C,Equalize,solution_20,20,GREEDY,95,,,0,,,,,,30,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,30,KEEP_ORIGINAL,로컬 최적해(인접 스왑)가 글로벌 최적해로 이어지는 구조임
+1037_C_solution_17,1037_C,Equalize,solution_17,17,GREEDY,95,,,0,,,,,,30,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,30,KEEP_ORIGINAL,"인접 요소 간의 단순 선택 문제이므로 그리디 분류가 적절하며, 다른 구체적인 알고리즘이 핵심을 결정하지 않음"
+1037_C_solution_18,1037_C,Equalize,solution_18,18,DP,95,,0,0,0,,,0,0,,0,,,,50,,,,0,,0,,,,,0,0,,,GREEDY,50,KEEP_ORIGINAL,상태 정의와 점화식이 명확하게 구현되어 있음
+804_B_solution_1,804_B,Minimum number of steps,solution_1,1,MATH,95,,,0,,0,60,,,30,,0,0,,40,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,KEEP_ORIGINAL,모듈러 연산과 지수적 증가 패턴 관찰이 핵심이므로 MATH 분류가 가장 적절함
+804_B_solution_2,804_B,Minimum number of steps,solution_2,2,MATH,95,,,0,,0,60,,,30,,0,0,,40,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,KEEP_ORIGINAL,수학적 패턴 인식과 모듈러 연산이 풀이의 전부이므로 MATH가 가장 적절함
+804_B_solution_5,804_B,Minimum number of steps,solution_5,5,GREEDY,65,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,그리디한 선택(최소 단계)을 요구하지만 실제 풀이는 관찰을 통한 수학적 공식 적용이다.
+804_B_solution_5,804_B,Minimum number of steps,solution_5,5,MATH,95,,,0,,0,70,,,20,,0,0,,65,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,모듈러 연산과 지수적 증가라는 수학적 성질이 문제 해결의 핵심이다.
+804_B_solution_6,804_B,Minimum number of steps,solution_6,6,GREEDY,60,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,그리디한 최적화 문제처럼 보이지만 실제로는 결정론적인 수학 공식 문제이다.
+804_B_solution_6,804_B,Minimum number of steps,solution_6,6,MATH,95,,,0,,0,70,,,40,,0,0,,60,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,지수적 증가와 모듈러 연산이라는 수학적 특성이 풀이의 핵심이다.
+804_B_solution_17,804_B,Minimum number of steps,solution_17,17,MATH,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+804_B_solution_18,804_B,Minimum number of steps,solution_18,18,MATH,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+804_B_solution_9,804_B,Minimum number of steps,solution_9,9,MATH,95,,,0,,0,60,,,10,,0,0,,10,,95,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,95,KEEP_ORIGINAL,모듈러 연산과 거듭제곱 패턴이 핵심인 전형적인 수학 문제임
+804_B_solution_10,804_B,Minimum number of steps,solution_10,10,MATH,95,,,0,,0,60,,,10,,0,0,,10,,95,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,95,KEEP_ORIGINAL,등비수열의 성질을 이용한 전형적인 수학 문제임
+804_B_solution_3,804_B,Minimum number of steps,solution_3,3,MATH,95,,,0,,0,70,,,30,,0,0,,20,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,KEEP_ORIGINAL,모듈러 연산과 등비수열의 합이라는 구체적인 수학적 기법이 사용되었으므로 MATH 태그가 가장 적절함
+804_B_solution_4,804_B,Minimum number of steps,solution_4,4,MATH,95,,,0,,0,70,,,20,,0,0,,30,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,KEEP_ORIGINAL,기하급수적 증가(2^k)와 모듈러 연산이 풀이의 핵심이므로 MATH가 가장 정확함
+804_B_solution_11,804_B,Minimum number of steps,solution_11,11,DP,95,,0,0,0,,,0,0,,0,,,,20,,,,30,,0,,,,,0,0,,,PREFIX_SUM,30,KEEP_ORIGINAL,명확한 점화식 f(n) = 2f(n-1) + 1이 존재하며 이를 이용해 상태를 전이시키므로 DP로 분류하는 것이 적절함
+804_B_solution_11,804_B,Minimum number of steps,solution_11,11,MATH,85,,,0,,0,40,,,95,,0,0,,20,,90,0,,,,0,,,,,,,,DP,95,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다는 구체적인 DP 점화식 구현이 코드의 핵심 구조를 결정함
+804_B_solution_12,804_B,Minimum number of steps,solution_12,12,DP,60,,0,0,0,,,0,0,,0,,,,20,,,,20,,0,,,,,0,0,,,PREFIX_SUM,20,REVIEW_NEEDED,역방향 순회 중 b = b * 2 연산이 사실상 DP의 상태 전이와 동일함. 다만 구현 형태가 매우 단순하여 MATH와 DP의 경계에 있음
+804_B_solution_12,804_B,Minimum number of steps,solution_12,12,MATH,95,,,0,,0,40,,,60,,0,0,,20,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,KEEP_ORIGINAL,2^n 형태의 지수적 증가를 다루는 수학적 통찰이 풀이의 핵심임
+804_B_solution_19,804_B,Minimum number of steps,solution_19,19,MATH,95,,,0,,0,70,,,0,,0,0,,0,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,치환 규칙에 따른 수열의 합과 모듈러 연산이 핵심이므로 MATH 태그가 가장 적절하다.
+804_B_solution_20,804_B,Minimum number of steps,solution_20,20,MATH,95,,,0,,0,70,,,0,,0,0,,0,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,지수적 증가 패턴과 모듈러 연산을 다루는 수학 문제의 전형적인 풀이다.
+804_B_solution_13,804_B,Minimum number of steps,solution_13,13,GREEDY,60,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,"그리디한 순회 방식이 사용되었으나, 핵심은 'b'의 개수가 2배가 된다는 수학적 관찰에 있음"
+804_B_solution_13,804_B,Minimum number of steps,solution_13,13,MATH,95,,,0,,0,90,,,20,,0,0,,60,,85,0,,,,0,,,,,,,,COMBINATORICS,90,KEEP_ORIGINAL,조합론적 규칙과 모듈러 연산이 핵심인 전형적인 수학 문제임
+804_B_solution_14,804_B,Minimum number of steps,solution_14,14,GREEDY,60,,,0,,,,,,20,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,20,KEEP_ORIGINAL,역순 순회라는 그리디한 접근이 있으나 핵심은 지수적 증가라는 수학적 규칙에 있음
+804_B_solution_14,804_B,Minimum number of steps,solution_14,14,MATH,95,,,0,,0,90,,,20,,0,0,,60,,85,0,,,,0,,,,,,,,COMBINATORICS,90,KEEP_ORIGINAL,조합론적 규칙과 모듈러 연산이 핵심인 전형적인 수학 문제임
+804_B_solution_15,804_B,Minimum number of steps,solution_15,15,MATH,95,,,0,,0,80,,,0,,0,0,,0,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다는 조합론적 관찰(Combinatorics)과 모듈러 연산(Modular Arithmetic)이 구체적인 핵심임
+804_B_solution_16,804_B,Minimum number of steps,solution_16,16,MATH,95,,,0,,0,80,,,0,,0,0,,0,,90,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,90,LIKELY_SPECIFIC_ALGORITHM,전반적인 MATH 범주 중 Combinatorics와 Modular Arithmetic가 가장 구체적인 핵심임
+804_B_solution_7,804_B,Minimum number of steps,solution_7,7,MATH,95,,,0,,0,60,,,30,,0,0,,40,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,"모듈러 연산과 조합론적 증가 패턴이 핵심이며, MATH 태그가 가장 적절함"
+804_B_solution_8,804_B,Minimum number of steps,solution_8,8,MATH,95,,,0,,0,60,,,30,,0,0,,40,,85,0,,,,0,,,,,,,,MODULAR_ARITHMETIC,85,KEEP_ORIGINAL,배수 증가 패턴과 모듈러 연산이 핵심인 전형적인 수학/구현 문제임
+1165_F2_solution_1,1165_F2,Microtransactions (hard version),solution_1,1,GREEDY,85,,,90,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY는 check 함수 내부의 판단 로직이며, 전체 풀이의 시간복잡도와 구조를 결정하는 핵심은 PARAMETRIC_SEARCH임."
+1165_F2_solution_2,1165_F2,Microtransactions (hard version),solution_2,2,GREEDY,90,,,90,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY는 check 함수 내의 구체적 기법이며, 문제 전체의 풀이 구조를 결정하는 것은 PARAMETRIC_SEARCH임."
+1165_F2_solution_3,1165_F2,Microtransactions (hard version),solution_3,3,GREEDY,90,,,30,,,,,,0,0,,,0,,,,95,,0,0,,,40,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,"GREEDY 전략(가장 늦은 세일 날짜 선택)이 정답 논리의 핵심이며, 이를 감싸는 Parametric Search 구조가 시간복잡도를 결정함"
+1165_F2_solution_4,1165_F2,Microtransactions (hard version),solution_4,4,GREEDY,90,,,30,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,"가장 늦은 세일일에 구매한다는 전략이 핵심 그리디 요소이며, 이분 탐색과 결합되어 최적해를 구함"
+1165_F2_solution_5,1165_F2,Microtransactions (hard version),solution_5,5,GREEDY,75,,,70,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,세일 품목의 마지막 가능 날짜를 선택하는 그리디 전략이 핵심이므로 GREEDY 유지가 적절함
+1165_F2_solution_6,1165_F2,Microtransactions (hard version),solution_6,6,GREEDY,90,,,70,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,세일 품목의 마지막 가능 날짜를 선택하여 자금을 최대한 확보하는 그리디 전략이 정답 논리의 핵심임
+1165_F2_solution_9,1165_F2,Microtransactions (hard version),solution_9,9,GREEDY,85,,,80,,,,,,0,0,,,0,,,,95,,0,0,,,40,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"그리디한 검증 방식이 핵심이나, 이를 통해 최적값을 찾는 전체 구조는 파라메트릭 서치에 의존함"
+1165_F2_solution_10,1165_F2,Microtransactions (hard version),solution_10,10,GREEDY,85,,,80,,,,,,0,0,,,0,,,,95,,0,0,,,40,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"그리디 검증이 핵심이나, 전체 문제 풀이의 구조는 파라메트릭 서치에 의해 결정됨"
+1165_F2_solution_11,1165_F2,Microtransactions (hard version),solution_11,11,GREEDY,90,,,40,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,"단순한 역순 순회 기반의 그리디 전략이며, 특정 자료구조를 이용한 최적화보다는 결정 문제의 판정 논리 자체가 핵심임"
+1165_F2_solution_12,1165_F2,Microtransactions (hard version),solution_12,12,GREEDY,90,,,40,,,,,,0,0,,,0,,,,95,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,95,KEEP_ORIGINAL,가장 늦은 날짜의 세일을 우선적으로 사용하는 단순 그리디 방식임
+1165_F2_solution_7,1165_F2,Microtransactions (hard version),solution_7,7,GREEDY,90,,,50,,,,,,0,0,,,0,,,,95,,0,0,,,30,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"그리디한 판정 함수가 포함되어 있으나, 전체 문제의 핵심 시간복잡도와 구조를 결정하는 것은 정답 값에 대한 이분 탐색(Parametric Search)임"
+1165_F2_solution_8,1165_F2,Microtransactions (hard version),solution_8,8,GREEDY,90,,,50,,,,,,0,0,,,0,,,,95,,0,0,,,70,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"그리디 판정 구조가 핵심이지만, 문제 해결을 가능하게 하는 전체 틀은 Parametric Search임"
+1165_F2_solution_13,1165_F2,Microtransactions (hard version),solution_13,13,GREEDY,90,,,95,,,,,,0,0,,,0,,,,95,,0,0,,,20,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY가 사용되었으나, 전체 풀이의 틀은 Parametric Search(Binary Search)가 결정함."
+1165_F2_solution_14,1165_F2,Microtransactions (hard version),solution_14,14,GREEDY,90,,,95,,,,,,0,0,,,0,,,,95,,0,0,,,20,0,,,0,0,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY 전략이 핵심이나, 문제 해결의 전체 프레임워크는 Parametric Search가 담당함."
+1165_F2_solution_15,1165_F2,Microtransactions (hard version),solution_15,15,GREEDY,95,,,60,,,,,,0,0,,,0,,,,100,,0,0,,,40,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,"GREEDY 전략이 사용되었지만, 전체적인 문제 해결의 틀은 PARAMETRIC_SEARCH가 결정함"
+1165_F2_solution_16,1165_F2,Microtransactions (hard version),solution_16,16,GREEDY,95,,,60,,,,,,0,0,,,0,,,,100,,0,0,,,30,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,"그리디한 선택이 핵심이지만, 문제 해결의 전체 프레임워크는 Parametric Search임"
+1165_F2_solution_17,1165_F2,Microtransactions (hard version),solution_17,17,GREEDY,90,,,95,,,,,,0,0,,,0,,,,100,,0,0,,,10,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,단순 그리디보다 정답의 단조성을 이용한 Parametric Search와 Binary Search가 문제 해결의 전체 구조를 결정함
+1165_F2_solution_18,1165_F2,Microtransactions (hard version),solution_18,18,GREEDY,90,,,95,,,,,,0,0,,,0,,,,100,,0,0,,,30,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,"그리디한 할당 방식이 사용되었으나, 전체적인 문제 해결 프레임워크는 Parametric Search에 의존함"
+1165_F2_solution_19,1165_F2,Microtransactions (hard version),solution_19,19,GREEDY,90,,,90,,,,,,0,0,,,0,,,,100,,0,0,,,0,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,GREEDY가 핵심이지만 이를 감싸고 있는 PARAMETRIC_SEARCH가 전체 풀이 구조와 시간복잡도를 결정함
+1165_F2_solution_20,1165_F2,Microtransactions (hard version),solution_20,20,GREEDY,90,,,90,,,,,,0,0,,,0,,,,100,,0,0,,,75,0,,,0,0,PARAMETRIC_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,"전형적인 Parametric Search + Greedy 구조이며, 정렬이 그리디 선택의 순서를 결정하는 핵심 도구로 사용됨"
+1004_B_solution_1,1004_B,Sonya and Exhibition,solution_1,1,MATH,60,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,산술적 최적화 성질(x * (L-x)의 최대화)을 이용한 것이므로 MATH 태그가 적절함
+1004_B_solution_2,1004_B,Sonya and Exhibition,solution_2,2,MATH,60,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,수학적 최적화 원리를 이용한 구성적 문제임
+1004_B_solution_5,1004_B,Sonya and Exhibition,solution_5,5,MATH,70,,,0,,0,0,,,0,,0,0,,40,,0,0,,,,0,,,,,,,,GREEDY,40,KEEP_ORIGINAL,"곱의 최대화라는 기초 수학적 원리를 이용한 것이나, 구현 자체가 매우 단순하여 구현 점수가 더 높음"
+1004_B_solution_6,1004_B,Sonya and Exhibition,solution_6,6,MATH,70,,,0,,0,0,,,0,,0,0,,40,,0,0,,,,0,,,,,,,,GREEDY,40,KEEP_ORIGINAL,기초적인 산술적 관찰에 기반한 constructive 풀이임
+1004_B_solution_7,1004_B,Sonya and Exhibition,solution_7,7,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순 교차 배치가 모든 구간의 최적값을 보장하는 그리디 전략임이 명확함
+1004_B_solution_7,1004_B,Sonya and Exhibition,solution_7,7,MATH,70,,,0,,0,0,,,0,,0,0,,85,,0,0,,,,0,,,,,,,,GREEDY,85,KEEP_ORIGINAL,"곱의 최대화라는 수학적 원리가 적용되었으나, 구현상 그리디한 구성이 핵심임"
+1004_B_solution_8,1004_B,Sonya and Exhibition,solution_8,8,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,교차 배치가 전 구간의 아름다움 합을 최대화하는 최적 전략임
+1004_B_solution_8,1004_B,Sonya and Exhibition,solution_8,8,MATH,70,,,0,,0,0,,,0,,0,0,,85,,0,0,,,,0,,,,,,,,GREEDY,85,KEEP_ORIGINAL,수학적 최적화 원리를 따르고 있으나 구현은 단순 그리디 구성임
+1004_B_solution_3,1004_B,Sonya and Exhibition,solution_3,3,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,특정 그리디 기법이나 다른 자료구조를 사용한 것이 아니라 수학적 성질을 이용한 단순 구성 문제임
+1004_B_solution_3,1004_B,Sonya and Exhibition,solution_3,3,MATH,90,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,합의 곱 x*(L-x)가 x=L/2일 때 최대라는 기본 산술 성질을 이용한 것이므로 MATH 태그가 적절함
+1004_B_solution_4,1004_B,Sonya and Exhibition,solution_4,4,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순 구성적 문제이며 특정한 그리디 최적화 기법이 사용되지 않음
+1004_B_solution_4,1004_B,Sonya and Exhibition,solution_4,4,MATH,90,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,x(L-x) 최대화라는 수학적 기초 원리를 이용한 풀이임
+1004_B_solution_9,1004_B,Sonya and Exhibition,solution_9,9,MATH,70,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,두 수의 곱이 최대가 되려면 두 수의 차이가 최소가 되어야 한다는 기본적인 수학적 성질에 기반함
+1004_B_solution_10,1004_B,Sonya and Exhibition,solution_10,10,MATH,70,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,곱의 최대화라는 수학적 원리를 이용함
+1004_B_solution_11,1004_B,Sonya and Exhibition,solution_11,11,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순한 수학적 관찰에 의한 구성이므로 다른 특정 알고리즘으로 대체되지 않음
+1004_B_solution_11,1004_B,Sonya and Exhibition,solution_11,11,MATH,95,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,산술-기하 평균의 원리를 이용하여 두 수의 차이를 최소화하는 기초적인 수학적 성질을 이용함
+1004_B_solution_12,1004_B,Sonya and Exhibition,solution_12,12,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순한 수학적 관찰에 의한 구성이므로 다른 특정 알고리즘으로 대체되지 않음
+1004_B_solution_12,1004_B,Sonya and Exhibition,solution_12,12,MATH,95,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,두 수의 합이 일정할 때 곱의 최대값은 두 수가 같을 때라는 수학적 기본 원리를 이용함
+1004_B_solution_13,1004_B,Sonya and Exhibition,solution_13,13,MATH,85,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,기본적인 산술적 성질(x*(L-x) 최대화)을 이용한 것이므로 MATH 태그가 적절함
+1004_B_solution_14,1004_B,Sonya and Exhibition,solution_14,14,MATH,85,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,기본적인 산술적 최적화 원리를 이용한 구현임
+1004_B_solution_15,1004_B,Sonya and Exhibition,solution_15,15,MATH,70,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"기초적인 대수적 성질(합이 일정할 때 곱의 최대화)을 이용한 것으로, 특정 고등 수학 알고리즘이 적용된 것은 아님."
+1004_B_solution_16,1004_B,Sonya and Exhibition,solution_16,16,MATH,70,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"기본적인 산술 성질을 이용한 것이며, 세부 수학 태그에 해당하지 않음."
+1004_B_solution_17,1004_B,Sonya and Exhibition,solution_17,17,MATH,75,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"함수 x(k-x)의 최대값 성질을 이용한 기초 수학적 접근이며, 더 구체적인 수학 태그로 분류하기 어렵다."
+1004_B_solution_18,1004_B,Sonya and Exhibition,solution_18,18,MATH,75,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"기초적인 산술 성질을 이용한 문제로, 더 세부적인 수학 알고리즘 분류에 해당하지 않는다."
+165_E_solution_1,165_E,Compatible Numbers,solution_1,1,DP,90,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,일반적인 DP보다 비트마스크 상의 부분집합 전파라는 매우 구체적인 BITMASK_DP 구조를 가짐
+165_E_solution_1,165_E,Compatible Numbers,solution_1,1,BITMASK,95,0,0,,,30,,0,,100,,,,,,20,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"비트마스크는 상태 표현 방식이며, 실제 풀이 구조는 DP(SOS DP)가 결정함"
+165_E_solution_2,165_E,Compatible Numbers,solution_2,2,DP,90,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,매우 전형적인 SOS DP(BITMASK_DP) 구조임
+165_E_solution_2,165_E,Compatible Numbers,solution_2,2,BITMASK,95,0,0,,,30,,0,,100,,,,,,20,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"비트마스크는 상태 표현이며, 핵심 해결책은 DP 전파 구조에 있음"
+1004_B_solution_19,1004_B,Sonya and Exhibition,solution_19,19,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,전형적인 그리디 선택이라기보다 수학적 최적 구조를 건설하는 Constructive 방식임
+1004_B_solution_19,1004_B,Sonya and Exhibition,solution_19,19,MATH,85,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,산술적 성질(두 수의 합이 일정할 때 곱의 최대화)을 이용한 풀이가 적절함
+1004_B_solution_20,1004_B,Sonya and Exhibition,solution_20,20,GREEDY,60,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,전형적인 그리디 알고리즘이라기보다 최적 구조를 생성하는 수학적 구성 문제임
+1004_B_solution_20,1004_B,Sonya and Exhibition,solution_20,20,MATH,85,,,0,,0,0,,,0,,0,0,,60,,0,0,,,,0,,,,,,,,GREEDY,60,KEEP_ORIGINAL,산술적 최대값 성질을 이용한 적절한 분류임
+165_E_solution_5,165_E,Compatible Numbers,solution_5,5,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,KEEP_ORIGINAL,"BITMASK_DP의 정석적인 형태이며, 상태 전이가 비트 마스크 부분집합 관계에 기반함"
+165_E_solution_5,165_E,Compatible Numbers,solution_5,5,BITMASK,95,0,0,,,20,,0,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태 표현 방식이며, 실제 풀이 구조와 시간복잡도를 결정하는 핵심은 DP 전이임"
+165_E_solution_6,165_E,Compatible Numbers,solution_6,6,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,KEEP_ORIGINAL,비트 마스크 기반의 상태 전이를 이용한 DP가 핵심이므로 적절함
+165_E_solution_6,165_E,Compatible Numbers,solution_6,6,BITMASK,95,0,0,,,20,,0,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태를 표현하는 수단이며, 실제 최적화의 핵심은 DP 전이 구조임"
+165_E_solution_3,165_E,Compatible Numbers,solution_3,3,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,LIKELY_SPECIFIC_ALGORITHM,단순 DP보다 구체적인 BITMASK_DP(SOS DP) 구조가 시간복잡도와 정답 논리를 결정함
+165_E_solution_3,165_E,Compatible Numbers,solution_3,3,BITMASK,95,0,0,,,20,,0,,90,,,,,,30,,,,,,,0,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태 표현 방식이며, 이를 이용한 DP 전이가 풀이의 핵심임"
+165_E_solution_4,165_E,Compatible Numbers,solution_4,4,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,LIKELY_SPECIFIC_ALGORITHM,일반적인 DP보다 비트마스크 집합 관계를 다루는 BITMASK_DP(SOS DP)가 훨씬 정확한 분류임
+165_E_solution_4,165_E,Compatible Numbers,solution_4,4,BITMASK,95,0,0,,,20,,0,,90,,,,,,30,,,,,,,0,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,단순 비트 연산이 아니라 비트마스크를 이용한 DP 상태 전이가 풀이의 핵심임
+165_E_solution_9,165_E,Compatible Numbers,solution_9,9,DP,80,,0,0,100,,,85,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,"DP 구조가 맞으며, 특히 비트마스크를 이용한 부분집합 전파(SOS DP)라는 구체적인 알고리즘임."
+165_E_solution_9,165_E,Compatible Numbers,solution_9,9,BITMASK,100,0,0,,,40,,85,,95,,,,,,0,,,,,,,0,,,,,,,DP,95,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태 표현 방식이며, 실제 풀이 구조는 dp[mask] 형태의 전파를 수행하는 BITMASK_DP임."
+165_E_solution_10,165_E,Compatible Numbers,solution_10,10,DP,80,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,"전형적인 SOS DP(Sum Over Subsets) 구조로, 비트마스크 기반의 DP임."
+165_E_solution_10,165_E,Compatible Numbers,solution_10,10,BITMASK,100,0,0,,,40,,0,,95,,,,,,0,,,,,,,0,,,,,,,DP,95,LIKELY_SPECIFIC_ALGORITHM,"비트마스크는 상태를 나타내며, 실제 풀이의 핵심은 전파(Propagation)라는 DP 과정에 있음."
+165_E_solution_7,165_E,Compatible Numbers,solution_7,7,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,LIKELY_SPECIFIC_ALGORITHM,일반적인 DP보다 비트 마스크의 부분집합 구조를 다루는 BITMASK_DP가 훨씬 구체적이고 정확한 설명임
+165_E_solution_7,165_E,Compatible Numbers,solution_7,7,BITMASK,95,0,0,,,0,,0,,90,,,,,,0,,,,,,,0,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,단순 비트 연산이 아니라 dp[mask] 형태의 상태 전이를 통해 부분집합을 찾는 DP 구조가 핵심임
+165_E_solution_8,165_E,Compatible Numbers,solution_8,8,DP,90,,0,0,95,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,95,LIKELY_SPECIFIC_ALGORITHM,비트 마스크 부분집합 탐색이라는 특수한 DP 형태이므로 BITMASK_DP가 더 구체적임
+165_E_solution_8,165_E,Compatible Numbers,solution_8,8,BITMASK,95,0,0,,,0,,0,,90,,,,,,0,,,,,,,0,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,단순 비트 조작이 아니라 상태 전이를 통한 최적/존재 값 찾기(DP)가 핵심임
+165_E_solution_13,165_E,Compatible Numbers,solution_13,13,DP,90,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,"비트마스크 상태 전이를 이용한 전형적인 SOS DP로, 다른 후보보다 BITMASK_DP가 훨씬 적절함"
+165_E_solution_13,165_E,Compatible Numbers,solution_13,13,BITMASK,90,0,0,,,0,,0,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,단순 비트마스크 사용이 아니라 dp[mask] 전이를 통해 부분집합 정보를 효율적으로 계산하는 DP 구조가 핵심임
+165_E_solution_14,165_E,Compatible Numbers,solution_14,14,DP,90,,0,0,100,,,80,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,"재귀 호출 구조가 DFS와 유사하지만, 실제 핵심은 비트마스크 상태의 최적값을 전파하는 DP임"
+165_E_solution_14,165_E,Compatible Numbers,solution_14,14,BITMASK,90,0,0,,,0,,80,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,비트마스크 표현을 사용하여 부분집합 간의 전이를 계산하는 DP가 풀이의 핵심임
+165_E_solution_11,165_E,Compatible Numbers,solution_11,11,DP,80,,0,0,90,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,90,LIKELY_SPECIFIC_ALGORITHM,단순 DP보다 구체적인 BITMASK_DP(SOS DP) 구조가 시간복잡도와 정답 논리를 결정함
+165_E_solution_11,165_E,Compatible Numbers,solution_11,11,BITMASK,90,0,0,,,0,,0,,80,,,,,,0,,,,,,,0,,,,,,,DP,80,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태 표현 방식이며, 실제 풀이 구조는 DP 전이(SOS DP)를 통해 결정됨"
+165_E_solution_12,165_E,Compatible Numbers,solution_12,12,DP,80,,0,0,90,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,90,LIKELY_SPECIFIC_ALGORITHM,단순 DP보다 구체적인 BITMASK_DP(SOS DP) 구조가 핵심임
+165_E_solution_12,165_E,Compatible Numbers,solution_12,12,BITMASK,90,0,0,,,0,,0,,80,,,,,,0,,,,,,,0,,,,,,,DP,80,LIKELY_SPECIFIC_ALGORITHM,BITMASK 표현을 기반으로 한 DP 전이가 풀이의 핵심임
+165_E_solution_15,165_E,Compatible Numbers,solution_15,15,DP,95,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,전형적인 BITMASK_DP(SOS DP) 구조이며 다른 후보 알고리즘으로 대체될 수 없음
+165_E_solution_15,165_E,Compatible Numbers,solution_15,15,BITMASK,100,0,0,,,40,,0,,100,,,,,,30,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,단순 비트마스크 표현을 넘어 dp[mask] 전이를 통해 시간복잡도를 최적화하므로 BITMASK_DP가 더 정확함
+165_E_solution_16,165_E,Compatible Numbers,solution_16,16,DP,95,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,전형적인 BITMASK_DP 구조이며 다른 후보 알고리즘으로 대체될 수 없음
+165_E_solution_16,165_E,Compatible Numbers,solution_16,16,BITMASK,100,0,0,,,40,,0,,100,,,,,,30,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,단순 비트마스크 사용이 아니라 전이 식을 통해 DP 테이블을 채우는 구조이므로 BITMASK_DP가 더 적절함
+165_E_solution_17,165_E,Compatible Numbers,solution_17,17,DP,90,,0,0,100,,,40,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,"DP 구조가 맞으나, 마스크 상태 전이를 이용한 BITMASK_DP(SOS DP)라는 매우 구체적인 알고리즘임"
+165_E_solution_17,165_E,Compatible Numbers,solution_17,17,BITMASK,100,20,0,,,30,,40,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,단순 비트 연산이 아니라 dp[mask] 형태의 상태 전이가 풀이의 핵심임
+165_E_solution_18,165_E,Compatible Numbers,solution_18,18,DP,90,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,LIKELY_SPECIFIC_ALGORITHM,SOS DP라는 매우 구체적인 비트마스크 DP 기법을 사용함
+165_E_solution_18,165_E,Compatible Numbers,solution_18,18,BITMASK,100,0,0,,,30,,0,,100,,,,,,0,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,단순 비트 연산이 아니라 DP 테이블 전이가 핵심인 BITMASK_DP임
+165_E_solution_19,165_E,Compatible Numbers,solution_19,19,DP,95,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,"BITMASK_DP의 전형적인 형태인 SOS DP이며, 다른 후보 알고리즘으로 대체 불가능함"
+165_E_solution_19,165_E,Compatible Numbers,solution_19,19,BITMASK,95,0,0,,,20,,0,,100,,,,,,20,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"단순 비트마스크 상태 표현을 넘어, DP 전이 구조(SOS DP)가 시간 복잡도를 결정하는 핵심임"
+165_E_solution_20,165_E,Compatible Numbers,solution_20,20,DP,95,,0,0,100,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,BITMASK,100,KEEP_ORIGINAL,전형적인 SOS DP 구조이며 다른 후보로 대체될 수 없음
+165_E_solution_20,165_E,Compatible Numbers,solution_20,20,BITMASK,95,0,0,,,20,,0,,100,,,,,,20,,,,,,,0,,,,,,,DP,100,LIKELY_SPECIFIC_ALGORITHM,"비트마스크 표현뿐만 아니라, 이를 활용한 DP 전이가 풀이의 핵심 복잡도를 결정함"
+1538_F_solution_1,1538_F,Interesting Function,solution_1,1,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 기반의 단순 합산 공식이므로 MATH 분류가 적절함
+1538_F_solution_2,1538_F,Interesting Function,solution_2,2,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,정수론적 성질(몫의 합)을 이용한 풀이이므로 MATH 분류가 매우 적절함
+1538_F_solution_5,1538_F,Interesting Function,solution_5,5,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 기반 카운팅 문제로 MATH 분류가 가장 적절함
+1538_F_solution_6,1538_F,Interesting Function,solution_6,6,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 기반의 수학적 카운팅 풀이로 MATH가 가장 적절함
+1538_F_solution_3,1538_F,Interesting Function,solution_3,3,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 체계의 수학적 성질을 이용한 최적의 풀이임.
+1538_F_solution_4,1538_F,Interesting Function,solution_4,4,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 체계의 성질을 이용한 수학적 풀이임.
+1538_F_solution_7,1538_F,Interesting Function,solution_7,7,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,특수한 정수론적 알고리즘보다는 10진법 자릿수 성질을 이용한 일반적인 수학적 접근임
+1538_F_solution_8,1538_F,Interesting Function,solution_8,8,MATH,98,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,10진수 자릿수 성질을 이용한 수학 풀이가 명확함
+1538_F_solution_11,1538_F,Interesting Function,solution_11,11,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"단순 사칙연산과 10진법 성질을 이용한 합산으로, MATH 태그가 가장 적절함"
+1538_F_solution_12,1538_F,Interesting Function,solution_12,12,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,10진법 체계의 수학적 성질을 이용한 최적 풀이임
+1538_F_solution_13,1538_F,Interesting Function,solution_13,13,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,구체적인 정수론적 성질(자릿수 변화 패턴)을 이용한 전형적인 MATH 문제임
+1538_F_solution_14,1538_F,Interesting Function,solution_14,14,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 체계의 성질을 이용한 전형적인 MATH 문제임
+1538_F_solution_9,1538_F,Interesting Function,solution_9,9,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"제시된 구체적 수학 후보들 중 해당되는 것이 없으며, 일반적인 진법 체계의 성질을 이용한 문제임."
+1538_F_solution_10,1538_F,Interesting Function,solution_10,10,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,특정 세부 수학 태그보다는 일반적인 진법 체계의 성질을 이용한 계산 문제임.
+1538_F_solution_15,1538_F,Interesting Function,solution_15,15,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,30,,0,,,,,0,0,,,PREFIX_SUM,30,KEEP_ORIGINAL,자릿수 DP 구조가 매우 명확하며 점화식에 기반해 계산함
+1538_F_solution_15,1538_F,Interesting Function,solution_15,15,MATH,85,,,0,,0,60,,,90,,0,0,,0,,0,0,,,,0,,,,,,,,DP,90,KEEP_ORIGINAL,수학적 원리가 기반이지만 구현 방식이 DP에 치중되어 있음
+1538_F_solution_16,1538_F,Interesting Function,solution_16,16,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"단순 사칙연산 이상으로, 자릿수 체계의 수학적 성질(base-10)을 이용한 핵심 로직이므로 MATH가 적절함"
+1538_F_solution_17,1538_F,Interesting Function,solution_17,17,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,수학적 규칙(자릿수 합산)을 이용한 풀이가 정확하며 다른 구체적 수학 알고리즘으로 대체되지 않음
+1538_F_solution_18,1538_F,Interesting Function,solution_18,18,MATH,95,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,자릿수 체계의 수학적 성질을 정확히 이용한 풀이임
+962_B_solution_5,962_B,Students in Railway Carriage,solution_5,5,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,특정 자료구조를 이용한 최적화보다 단순한 그리디 선택과 산술 계산이 핵심인 문제임
+962_B_solution_6,962_B,Students in Railway Carriage,solution_6,6,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,복잡한 자료구조 없이 단순한 조건부 선택으로 해결되는 그리디 문제임
+962_B_solution_4,962_B,Students in Railway Carriage,solution_4,4,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,60,0,TWO_POINTERS,60,KEEP_ORIGINAL,"세그먼트를 찾는 과정에서 투포인터 형식을 썼으나, 핵심은 세그먼트별 최적 분배라는 그리디 전략임"
+1538_F_solution_19,1538_F,Interesting Function,solution_19,19,MATH,90,,,0,,20,0,,,30,,0,0,,0,,0,0,,,,0,,,,,,,,DP,30,KEEP_ORIGINAL,10진수 자릿수 변화라는 수학적 성질을 이용한 풀이가 맞음
+1538_F_solution_20,1538_F,Interesting Function,solution_20,20,MATH,100,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,10진수 자릿수 성질을 이용한 전형적인 수학 문제 풀이임
+962_B_solution_1,962_B,Students in Railway Carriage,solution_1,1,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,특정 자료구조 없이 단순 인원수 비교를 통한 그리디 선택이 핵심임
+962_B_solution_2,962_B,Students in Railway Carriage,solution_2,2,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"단순 조건문 기반의 그리디 선택이며, 추가적인 고급 자료구조가 필요하지 않음"
+962_B_solution_7,962_B,Students in Railway Carriage,solution_7,7,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+962_B_solution_8,962_B,Students in Railway Carriage,solution_8,8,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+962_B_solution_9,962_B,Students in Railway Carriage,solution_9,9,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,매 순간 최적의 선택(더 많은 인원이 남은 그룹 배치)이 전체 최적해로 이어지는 그리디 구조가 명확함
+962_B_solution_10,962_B,Students in Railway Carriage,solution_10,10,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,10,KEEP_ORIGINAL,홀수 구간의 추가 좌석을 더 많이 남은 쪽에게 할당하는 선택이 전체 최적해를 보장하는 그리디 방식임
+962_B_solution_10,962_B,Students in Railway Carriage,solution_10,10,MATH,70,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,단순한 몫과 나머지 연산을 통한 구간 수용량 계산이므로 구체적인 수학 태그보다는 GREEDY/MATH의 조합으로 보는 것이 적절함
+962_B_solution_13,962_B,Students in Railway Carriage,solution_13,13,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+962_B_solution_14,962_B,Students in Railway Carriage,solution_14,14,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+962_B_solution_14,962_B,Students in Railway Carriage,solution_14,14,MATH,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+962_B_solution_11,962_B,Students in Railway Carriage,solution_11,11,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순 선택 기준에 의한 그리디 풀이이며 다른 구체적 알고리즘이 필요하지 않음
+962_B_solution_12,962_B,Students in Railway Carriage,solution_12,12,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,수학적 관찰에 기반한 그리디 풀이이며 다른 구체적 알고리즘 요소가 없음
+962_B_solution_12,962_B,Students in Railway Carriage,solution_12,12,MATH,85,,,0,,0,0,,,0,,0,0,,90,,0,0,,,,0,,,,,,,,GREEDY,90,KEEP_ORIGINAL,단순 몫과 나머지를 이용한 계산이므로 구체적인 정수론/조합론 태그보다는 general한 MATH와 GREEDY의 조합이 적절함
+962_B_solution_15,962_B,Students in Railway Carriage,solution_15,15,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"단순한 용량 할당 문제이며, 매 단계의 최적 선택이 전체 최적을 보장하는 명확한 그리디 구조임"
+962_B_solution_16,962_B,Students in Railway Carriage,solution_16,16,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,매 구간의 최적 선택이 전체 최적해로 이어지는 전형적인 그리디 문제임
+962_B_solution_17,962_B,Students in Railway Carriage,solution_17,17,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,60,0,,,0,0,SORTING,60,KEEP_ORIGINAL,"정렬을 사용하긴 하지만, 이는 그리디 선택을 돕기 위한 수단일 뿐이며 문제의 핵심은 빈 좌석의 홀수/짝수 성질을 이용한 최적 배치임"
+962_B_solution_18,962_B,Students in Railway Carriage,solution_18,18,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,추가적인 자료구조 없이 단순 산술 연산과 조건문만으로 최적해를 구하는 그리디 구조임
+1369_C_solution_1,1369_C,RationalLee,solution_1,1,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,65,0,SORTING,85,KEEP_ORIGINAL,"정렬과 투포인터는 그리디 전략을 구현하기 위한 수단이며, 핵심 논리는 최적의 선택을 반복하는 그리디 알고리즘임."
+1369_C_solution_2,1369_C,RationalLee,solution_2,2,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,65,0,SORTING,85,KEEP_ORIGINAL,전형적인 정렬 기반 그리디 문제임.
+962_B_solution_19,962_B,Students in Railway Carriage,solution_19,19,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,50,0,,,0,0,SORTING,50,KEEP_ORIGINAL,"구간별 최대 수용 인원을 결정하고 남은 학생 수를 소모하는 방식은 전형적인 그리디 접근이며, 다른 특수 알고리즘의 개입이 없다."
+962_B_solution_20,962_B,Students in Railway Carriage,solution_20,20,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,단순 구간 분할 후 최적 그룹 매칭으로 해결되는 전형적인 그리디 문제임.
+1369_C_solution_3,1369_C,RationalLee,solution_3,3,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,60,0,SORTING,95,KEEP_ORIGINAL,"정렬 기반의 그리디 선택이 핵심이며, 다른 특정 자료구조나 알고리즘으로 대체될 성격이 아님"
+1369_C_solution_4,1369_C,RationalLee,solution_4,4,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,60,0,SORTING,95,KEEP_ORIGINAL,"정렬 기반 그리디가 최적해를 보장하는 구조이며, 다른 특수 알고리즘의 필요성이 없음"
+1369_C_solution_5,1369_C,RationalLee,solution_5,5,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,65,0,SORTING,85,KEEP_ORIGINAL,"정렬과 투포인터가 사용되었으나, 문제의 핵심은 어떤 수를 누구에게 배정할 것인가에 대한 그리디 선택이다."
+1369_C_solution_6,1369_C,RationalLee,solution_6,6,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬 기반의 그리디 선택이 핵심이며, 다른 구체적인 알고리즘으로 대체되지 않는다."
+1369_C_solution_7,1369_C,RationalLee,solution_7,7,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,30,0,SORTING,90,KEEP_ORIGINAL,"정렬을 기반으로 한 그리디 선택이 핵심이며, 다른 후보 알고리즘이 대체할 수 없는 구조임"
+1369_C_solution_8,1369_C,RationalLee,solution_8,8,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,60,0,SORTING,90,KEEP_ORIGINAL,정렬 후 최적의 쌍을 선택하는 그리디 전략이 문제의 핵심임
+1369_C_solution_9,1369_C,RationalLee,solution_9,9,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,정렬을 기반으로 한 그리디 접근이 명확함
+1369_C_solution_10,1369_C,RationalLee,solution_10,10,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,80,0,SORTING,90,KEEP_ORIGINAL,정렬 후 양 끝단 값을 매칭하는 투 포인터 기반 그리디가 최적해를 보장함
+1369_C_solution_11,1369_C,RationalLee,solution_11,11,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,30,0,SORTING,85,KEEP_ORIGINAL,"정렬은 그리디 전략을 수행하기 위한 전처리 단계이며, 핵심은 어떤 값을 선택하느냐는 그리디 논리에 있음"
+1369_C_solution_12,1369_C,RationalLee,solution_12,12,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,30,0,SORTING,85,KEEP_ORIGINAL,"정렬은 그리디 전략을 위해 필수적인 전처리기이며, 정답을 결정하는 핵심 논리는 그리디 선택에 있음"
+1369_C_solution_13,1369_C,RationalLee,solution_13,13,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,75,0,SORTING,95,KEEP_ORIGINAL,정렬 기준의 그리디 전략이 문제의 시간복잡도와 정답 논리를 결정하는 핵심임
+1369_C_solution_14,1369_C,RationalLee,solution_14,14,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,60,0,SORTING,95,KEEP_ORIGINAL,정렬된 상태에서의 최적 선택 전략이 핵심이므로 그리디 분류가 적절함
+1369_C_solution_15,1369_C,RationalLee,solution_15,15,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,40,0,SORTING,90,KEEP_ORIGINAL,"정렬된 상태에서 최적의 쌍을 맺어주는 전형적인 Greedy 문제이며, 다른 대체 알고리즘의 징후가 없음"
+1369_C_solution_16,1369_C,RationalLee,solution_16,16,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,40,0,SORTING,90,KEEP_ORIGINAL,전형적인 Greedy 매칭 문제이며 정렬을 통한 최적 선택 구조가 명확함
+1369_C_solution_17,1369_C,RationalLee,solution_17,17,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,80,0,,,40,0,SORTING,80,KEEP_ORIGINAL,"정렬이 필수적이지만, 정렬 이후의 값 배분 로직(가장 큰 w에 가장 작은 값을 매칭)이 문제 해결의 핵심 논리이므로 GREEDY가 적절함"
+1369_C_solution_18,1369_C,RationalLee,solution_18,18,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,80,0,,,70,0,SORTING,80,KEEP_ORIGINAL,"투포인터와 정렬이 사용되었으나, 이는 그리디하게 최솟값과 최댓값을 매칭하기 위한 도구일 뿐이며 전체적인 전략은 그리디함"
+1369_C_solution_19,1369_C,RationalLee,solution_19,19,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,65,0,SORTING,85,KEEP_ORIGINAL,"정렬과 투포인터 기법이 사용되었으나, 이는 그리디 전략을 구현하기 위한 수단이며 문제의 핵심은 '어떤 값을 누구에게 배분할 것인가'에 대한 그리디 결정임"
+1369_C_solution_20,1369_C,RationalLee,solution_20,20,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,65,0,SORTING,85,KEEP_ORIGINAL,그리디 전략이 문제 해결의 핵심이며 정렬은 이를 위한 전처리 단계임
+702_B_solution_1,702_B,Powers of Two,solution_1,1,MATH,60,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"2의 거듭제곱 성질을 이용한 간단한 수학적 접근이며, 핵심 제어 구조는 맵 탐색임"
+702_B_solution_2,702_B,Powers of Two,solution_2,2,MATH,60,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,간단한 2의 거듭제곱 성질 이용
+702_B_solution_3,702_B,Powers of Two,solution_3,3,MATH,70,,,0,,30,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,30,KEEP_ORIGINAL,"2의 거듭제곱이라는 성질을 이용하지만, 복잡한 정수론적 증명보다는 해시 맵을 통한 효율적인 탐색이 핵심임"
+702_B_solution_4,702_B,Powers of Two,solution_4,4,MATH,70,,,0,,30,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,30,KEEP_ORIGINAL,"수학적 성질(2^x)을 이용한 탐색 범위 제한이 핵심이나, 이를 구현하는 주 도구는 해시 맵임"
+702_B_solution_5,702_B,Powers of Two,solution_5,5,MATH,80,,,0,,60,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용하지만, 복잡한 정수론적 기법보다는 단순 값 생성 및 비교에 해당함."
+702_B_solution_6,702_B,Powers of Two,solution_6,6,MATH,80,,,0,,60,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,"2의 거듭제곱 합이라는 수학적 성질을 이용하지만, 이는 단순한 값의 범위 제한으로 작용하며 복잡한 수학적 증명이나 알고리즘이 필요하지 않음."
+702_B_solution_7,702_B,Powers of Two,solution_7,7,MATH,85,,,0,,70,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,70,KEEP_ORIGINAL,2의 거듭제곱이라는 수학적 성질 자체가 문제의 핵심 조건임
+702_B_solution_8,702_B,Powers of Two,solution_8,8,MATH,85,,,0,,70,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,70,KEEP_ORIGINAL,2의 거듭제곱 성질을 이용한 값 탐색이 문제의 핵심이다.
+702_B_solution_9,702_B,Powers of Two,solution_9,9,MATH,70,,,0,,60,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용한 문제로, 구체적인 정수론 기법보다는 단순 수열 성질 이용에 가까움"
+702_B_solution_10,702_B,Powers of Two,solution_10,10,MATH,70,,,0,,60,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,2의 거듭제곱 성질을 이용한 단순 계산 문제임
+702_B_solution_11,702_B,Powers of Two,solution_11,11,MATH,80,,,0,,30,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,30,KEEP_ORIGINAL,"2의 거듭제곱수라는 특성을 이용한 단순 수학적 확인 과정이며, 더 구체적인 정수론 알고리즘이 필요하지 않음"
+702_B_solution_12,702_B,Powers of Two,solution_12,12,MATH,80,,,0,,30,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,30,KEEP_ORIGINAL,특별한 정수론 알고리즘 없이 2의 거듭제곱 성질만 이용함
+702_B_solution_13,702_B,Powers of Two,solution_13,13,MATH,85,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용하지만, 정답 도출의 핵심은 Hash Map을 통한 효율적 탐색에 있음"
+702_B_solution_14,702_B,Powers of Two,solution_14,14,MATH,85,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,"2의 거듭제곱 성질을 이용하지만, 핵심 효율성은 Map 자료구조에서 나옴"
+702_B_solution_15,702_B,Powers of Two,solution_15,15,MATH,60,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용하지만, 이를 구현하는 핵심 도구는 Hash Map임"
+702_B_solution_16,702_B,Powers of Two,solution_16,16,MATH,60,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,"2의 거듭제곱 성질을 활용한 단순 계산 문제로, 더 구체적인 수학 알고리즘(정수론 등)이 핵심은 아님"
+702_B_solution_17,702_B,Powers of Two,solution_17,17,MATH,70,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용하지만, 이를 구현하는 핵심 도구는 Hash Map임."
+702_B_solution_18,702_B,Powers of Two,solution_18,18,MATH,70,,,0,,0,30,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,COMBINATORICS,30,KEEP_ORIGINAL,"수학적 성질(2의 거듭제곱)을 사용하지만, 구현상의 핵심은 Hash Map 조회이다."
+702_B_solution_19,702_B,Powers of Two,solution_19,19,MATH,60,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,"2의 거듭제곱이라는 수학적 성질을 이용하지만, 해결 방법은 단순 해시 맵 탐색임"
+702_B_solution_20,702_B,Powers of Two,solution_20,20,MATH,60,,,0,,40,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,40,KEEP_ORIGINAL,단순 2의 거듭제곱 성질 이용
+1373_D_solution_3,1373_D,Maximum Sum on Even Positions,solution_3,3,GREEDY,70,,,0,,,,,,95,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY하게 보일 수 있으나, 전형적인 DP 문제인 Maximum Subarray Sum (Kadane's) 구조임"
+1373_D_solution_3,1373_D,Maximum Sum on Even Positions,solution_3,3,DP,95,,0,0,0,,,0,0,,0,,,,70,,,,40,,0,,,,,0,0,,,GREEDY,70,KEEP_ORIGINAL,"명확한 점화식(dp[i] = max(a[i], dp[i-1]+a[i]))을 기반으로 하는 DP 풀이임"
+1373_D_solution_4,1373_D,Maximum Sum on Even Positions,solution_4,4,GREEDY,70,,,0,,,,,,95,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,95,LIKELY_SPECIFIC_ALGORITHM,구조적으로 Kadane's 알고리즘(DP)을 구현한 것임
+1373_D_solution_4,1373_D,Maximum Sum on Even Positions,solution_4,4,DP,95,,0,0,0,,,0,0,,0,,,,70,,,,30,,0,,,,,0,0,,,GREEDY,70,KEEP_ORIGINAL,전형적인 Kadane's DP 풀이임
+1373_D_solution_1,1373_D,Maximum Sum on Even Positions,solution_1,1,GREEDY,80,,,0,,,,,,90,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,90,KEEP_ORIGINAL,"Kadane's algorithm은 그리디한 선택과 DP의 성격을 동시에 가지나, 문제의 구조상 DP로 분류하는 것이 일반적이며 적절함"
+1373_D_solution_1,1373_D,Maximum Sum on Even Positions,solution_1,1,DP,90,,0,0,0,,,0,0,,0,,,,80,,,,40,,0,,,,,0,0,,,GREEDY,80,KEEP_ORIGINAL,명확한 상태 전이(현재까지의 최대합)를 사용하는 Kadane's 알고리즘이므로 DP 분류가 타당함
+1373_D_solution_2,1373_D,Maximum Sum on Even Positions,solution_2,2,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,0,,0,,,,,0,0,,,GREEDY,40,KEEP_ORIGINAL,상태 정의와 전이가 명확한 전형적인 DP 풀이임
+1373_D_solution_5,1373_D,Maximum Sum on Even Positions,solution_5,5,DP,95,,0,0,0,,,0,0,,0,,,,30,,,,20,,0,,,,,0,0,,,GREEDY,30,KEEP_ORIGINAL,"명확한 상태 전이(dp[i] = max(a[i], dp[i-1]+a[i]))가 존재하는 Kadane's DP임"
+1373_D_solution_6,1373_D,Maximum Sum on Even Positions,solution_6,6,DP,95,,0,0,0,,,0,0,,0,,,,30,,,,20,,0,,,,,0,0,,,GREEDY,30,KEEP_ORIGINAL,명확한 DP 상태 정의와 전이가 구현되어 있음
+1373_D_solution_8,1373_D,Maximum Sum on Even Positions,solution_8,8,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,0,,0,,,,,0,0,,,GREEDY,40,KEEP_ORIGINAL,전형적인 1D DP 구조이므로 적절함
+1373_D_solution_9,1373_D,Maximum Sum on Even Positions,solution_9,9,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,80,,0,,,,,0,0,,,PREFIX_SUM,80,KEEP_ORIGINAL,"누적합(PREFIX_SUM)을 사용하고 있으나, 이를 통해 최대 구간합을 구하는 DP 논리가 핵심임"
+1373_D_solution_10,1373_D,Maximum Sum on Even Positions,solution_10,10,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,80,,0,,,,,0,0,,,PREFIX_SUM,80,KEEP_ORIGINAL,누적합을 이용한 구간 합 최적화는 DP의 전형적인 형태임
+1373_D_solution_11,1373_D,Maximum Sum on Even Positions,solution_11,11,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,40,,0,,,,,0,0,,,PREFIX_SUM,40,KEEP_ORIGINAL,명확한 상태 전이(현재 위치에서의 최대 합)를 가지는 Kadane's Algorithm이므로 DP가 적절함
+1373_D_solution_12,1373_D,Maximum Sum on Even Positions,solution_12,12,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,40,,0,,,,,0,0,,,PREFIX_SUM,40,KEEP_ORIGINAL,전형적인 1차원 DP 문제임
+1373_D_solution_13,1373_D,Maximum Sum on Even Positions,solution_13,13,GREEDY,85,,,0,,,,,,95,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY하게 보이지만, 실제로는 이전 상태의 최적값을 누적하여 현재의 최적값을 결정하는 DP(Kadane's) 구조임"
+1373_D_solution_13,1373_D,Maximum Sum on Even Positions,solution_13,13,DP,95,,0,0,0,,,0,0,,0,,,,85,,,,40,,0,,,,,0,0,,,GREEDY,85,KEEP_ORIGINAL,"명확한 점화식(dp[i] = max(0, dp[i-1] + diff))을 가진 1차원 DP 구조임"
+1373_D_solution_14,1373_D,Maximum Sum on Even Positions,solution_14,14,GREEDY,85,,,0,,,,,,95,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,95,LIKELY_SPECIFIC_ALGORITHM,전형적인 DP 문제인 Maximum Subarray Sum을 해결하는 카다네 알고리즘을 사용함
+1373_D_solution_14,1373_D,Maximum Sum on Even Positions,solution_14,14,DP,95,,0,0,0,,,0,0,,0,,,,85,,,,40,,0,,,,,0,0,,,GREEDY,85,KEEP_ORIGINAL,"상태 전이 식(dp[i] = max(current, dp[i-1]+current))이 명확한 DP 구조임"
+1373_D_solution_17,1373_D,Maximum Sum on Even Positions,solution_17,17,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,40,,0,,,,,0,0,,,PREFIX_SUM,40,KEEP_ORIGINAL,명확한 상태 전이(현재까지의 최대합)와 점화식이 존재하므로 DP가 가장 적절함
+1373_D_solution_18,1373_D,Maximum Sum on Even Positions,solution_18,18,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,40,,0,,,,,0,0,,,PREFIX_SUM,40,KEEP_ORIGINAL,점화식을 통한 상태 갱신이 핵심이므로 DP가 맞음
+1373_D_solution_19,1373_D,Maximum Sum on Even Positions,solution_19,19,GREEDY,70,,,0,,,,,,100,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,100,LIKELY_SPECIFIC_ALGORITHM,GREEDY하게 보일 수 있으나 실제로는 이전 상태의 최적값을 이용하는 DP(Kadane's) 구조가 핵심임
+1373_D_solution_19,1373_D,Maximum Sum on Even Positions,solution_19,19,DP,95,,0,0,0,,,0,0,,0,,,,70,,,,60,,0,,,,,0,0,,,GREEDY,70,KEEP_ORIGINAL,"전형적인 최대 부분 합 DP 문제로, 점화식이 명확함"
+1373_D_solution_20,1373_D,Maximum Sum on Even Positions,solution_20,20,GREEDY,70,,,0,,,,,,100,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,100,LIKELY_SPECIFIC_ALGORITHM,"표면적으로는 탐욕적인 선택처럼 보이나, 실제로는 1차원 DP인 카다네 알고리즘이 핵심임"
+1373_D_solution_20,1373_D,Maximum Sum on Even Positions,solution_20,20,DP,95,,0,0,0,,,0,0,,0,,,,70,,,,40,,0,,,,,0,0,,,GREEDY,70,KEEP_ORIGINAL,전형적인 최대 부분 합 DP 문제임
+1373_D_solution_15,1373_D,Maximum Sum on Even Positions,solution_15,15,GREEDY,60,,,0,,,,,,95,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 선택처럼 보이지만, 실제로는 이전 상태의 최적값을 누적하여 결정하는 DP(Kadane's) 구조가 시간복잡도와 정답 논리를 결정함"
+1373_D_solution_15,1373_D,Maximum Sum on Even Positions,solution_15,15,DP,90,,0,0,0,,,0,0,,0,,,,60,,,,40,,0,,,,,0,0,,,GREEDY,60,KEEP_ORIGINAL,"명확한 1차원 DP 점화식(dp[i] = max(a[i], dp[i-1] + a[i]))을 기반으로 하는 카다네 알고리즘이므로 DP로 분류하는 것이 적절함"
+1373_D_solution_16,1373_D,Maximum Sum on Even Positions,solution_16,16,GREEDY,60,,,0,,,,,,100,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,100,LIKELY_SPECIFIC_ALGORITHM,"단순 Greedy가 아니라, 부분 문제의 최적해를 이용해 전체 최적해를 구하는 DP(Maximum Subarray Sum)가 핵심임"
+1373_D_solution_16,1373_D,Maximum Sum on Even Positions,solution_16,16,DP,95,,0,0,0,,,0,0,,0,,,,60,,,,50,,0,,,,,0,0,,,GREEDY,60,KEEP_ORIGINAL,카다네 알고리즘은 가장 대표적인 1차원 DP 사례 중 하나임
+845_B_solution_1,845_B,Luba And The Ticket,solution_1,1,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,0,0,SORTING,70,KEEP_ORIGINAL,"정렬을 사용하지만, 정렬 기준 자체보다 '가장 큰 변화를 주는 값을 선택'하는 그리디 논리가 전체 풀이 구조를 결정함"
+845_B_solution_3,845_B,Luba And The Ticket,solution_3,3,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,60,0,,,0,0,SORTING,60,KEEP_ORIGINAL,"정렬을 사용하지만, 핵심은 매 순간 최적의 차이를 선택하는 그리디 전략임"
+845_B_solution_6,845_B,Luba And The Ticket,solution_6,6,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,90,0,,,0,0,SORTING,90,LIKELY_SPECIFIC_ALGORITHM,그리디 선택을 위해 정렬 기준(각 자리수 변경 시 얻는 최대 이득)을 잡는 것이 핵심이므로 SORTING_GREEDY 성격이 강함
+845_B_solution_14,845_B,Luba And The Ticket,solution_14,14,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"전형적인 그리디 전략으로, 각 단계에서 합의 차이를 최대화하여 줄이는 선택을 수행함"
+845_B_solution_12,845_B,Luba And The Ticket,solution_12,12,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,50,0,,,0,0,SORTING,50,KEEP_ORIGINAL,"정렬을 사용했지만 이는 그리디하게 최선의 숫자를 뽑기 위한 보조 수단일 뿐, 풀이의 핵심 논리는 그리디한 선택에 기반함"
+845_B_solution_15,845_B,Luba And The Ticket,solution_15,15,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,0,0,SORTING,70,KEEP_ORIGINAL,"정렬을 사용하지만, 핵심 논리는 매 순간 최선의 이득을 선택하는 그리디 전략임."
+845_B_solution_16,845_B,Luba And The Ticket,solution_16,16,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,0,0,SORTING,70,KEEP_ORIGINAL,정렬을 통해 최적의 후보를 찾고 그리디하게 선택하는 구조이므로 적절함.
+845_B_solution_18,845_B,Luba And The Ticket,solution_18,18,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,40,0,,,0,0,SORTING,40,KEEP_ORIGINAL,"단순 min/max 추출을 통한 그리디 선택이 핵심이며, 다른 특정 알고리즘으로 대체될 만큼 복잡한 구조가 아님"
+845_B_solution_19,845_B,Luba And The Ticket,solution_19,19,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,75,0,,,0,0,SORTING,75,KEEP_ORIGINAL,"정렬이 사용되었으나, 이는 매 순간 최적의 이득을 가진 자릿수를 선택하기 위한 수단이며 전체적인 풀이 구조는 그리디함"
+845_B_solution_20,845_B,Luba And The Ticket,solution_20,20,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,75,0,,,0,0,SORTING,75,KEEP_ORIGINAL,"정렬은 그리디 선택을 위한 보조 도구이며, 핵심 논리는 합의 차이를 가장 빠르게 줄이는 자릿수를 선택하는 그리디 전략임"
+1084_C_solution_3,1084_C,The Fair Nut and String,solution_3,3,MATH,85,,,0,,0,95,,,40,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,단순 MATH 태그보다 구체적인 COMBINATORICS(조합론)가 풀이의 핵심 논리를 정확히 설명함
+1084_C_solution_4,1084_C,The Fair Nut and String,solution_4,4,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"명확한 상태 전이 구조(A, B 변수 활용)가 존재하므로 DP가 적절하다."
+1084_C_solution_4,1084_C,The Fair Nut and String,solution_4,4,MATH,60,,,0,,0,70,,,90,,0,0,,0,,70,0,,,,0,,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,수학적 성질을 이용하지만 구현 구조는 명확하게 DP 전이 형태를 띠고 있음
+1084_C_solution_5,1084_C,The Fair Nut and String,solution_5,5,MATH,80,,,0,,0,95,,,30,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다 COMBINATORICS(조합론)라는 구체적인 알고리즘이 풀이의 핵심임
+1084_C_solution_6,1084_C,The Fair Nut and String,solution_6,6,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,70,,0,,,,,0,0,,,PREFIX_SUM,70,REVIEW_NEEDED,DP 구조를 가지고 있으나 실제로는 단순 누적합(PREFIX_SUM)의 반복적인 갱신으로 풀이가 가능함
+1084_C_solution_6,1084_C,The Fair Nut and String,solution_6,6,MATH,70,,,0,,0,80,,,90,,0,0,,0,,60,0,,,,0,,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다는 DP 또는 COMBINATORICS가 더 구체적인 핵심 알고리즘임
+1084_C_solution_7,1084_C,The Fair Nut and String,solution_7,7,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,20,,0,,,,,0,0,,,PREFIX_SUM,20,KEEP_ORIGINAL,명확한 상태 전이와 이전 값의 재사용이 확인되는 DP 구조임
+1084_C_solution_7,1084_C,The Fair Nut and String,solution_7,7,MATH,70,,,0,,0,85,,,90,,0,0,,0,,60,0,,,,0,,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,"MATH 범주 내에서 조합론(Combinatorics)과 DP가 핵심이며, 특히 DP로 효율적인 구현이 이루어짐"
+1084_C_solution_8,1084_C,The Fair Nut and String,solution_8,8,MATH,90,,,0,,0,100,,,30,,0,0,,0,,60,0,,,,0,,,,,,,,COMBINATORICS,100,LIKELY_SPECIFIC_ALGORITHM,MATH 범주 중 조합론(Combinatorics)이 풀이의 전체 구조를 결정하는 핵심 알고리즘임
+1084_C_solution_9,1084_C,The Fair Nut and String,solution_9,9,MATH,90,,,0,,0,95,,,20,,0,0,,0,,60,0,,,,0,,,,,,,,COMBINATORICS,95,KEEP_ORIGINAL,조합론적 곱셈 원리가 핵심이므로 MATH/COMBINATORICS 분류가 적절함.
+1084_C_solution_10,1084_C,The Fair Nut and String,solution_10,10,MATH,90,,,0,,0,95,,,20,,0,0,,0,,60,0,,,,0,,,,,,,,COMBINATORICS,95,KEEP_ORIGINAL,조합론적 경우의 수 계산이 핵심이므로 분류가 정확함.
+1084_C_solution_11,1084_C,The Fair Nut and String,solution_11,11,MATH,70,,,0,,0,95,,,40,,0,0,,0,,60,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다 COMBINATORICS(조합론)가 문제의 핵심 논리를 정확히 설명함
+1084_C_solution_12,1084_C,The Fair Nut and String,solution_12,12,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,단순 누적합이 아니라 이전 상태(ant)에 의존하는 정당한 DP 전이임
+1084_C_solution_13,1084_C,The Fair Nut and String,solution_13,13,DP,95,,0,0,0,,,0,0,,0,,,,0,,,,30,,0,,,,,0,0,,,PREFIX_SUM,30,KEEP_ORIGINAL,단순 누적합이 아니라 이전 'b' 이전의 상태를 참조하는 점화식 구조이므로 DP가 적절함
+1084_C_solution_14,1084_C,The Fair Nut and String,solution_14,14,MATH,90,,,0,,0,95,,,40,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다 COMBINATORICS(조합론)의 곱의 법칙이 훨씬 구체적인 핵심 알고리즘임
+1084_C_solution_17,1084_C,The Fair Nut and String,solution_17,17,MATH,60,,,0,,0,95,,,30,,0,0,,0,,50,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,넓은 의미의 MATH보다는 구체적인 COMBINATORICS(조합론)의 곱의 법칙을 사용하는 것이 정확함
+1084_C_solution_18,1084_C,The Fair Nut and String,solution_18,18,MATH,60,,,0,,0,95,,,30,,0,0,,0,,50,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,수학 전반보다는 구체적인 조합론(COMBINATORICS)의 곱의 법칙을 적용한 풀이임
+1084_C_solution_19,1084_C,The Fair Nut and String,solution_19,19,MATH,80,,,0,,0,95,,,30,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,KEEP_ORIGINAL,조합론적 계산이 핵심이며 MODULAR_ARITHMETIC이 보조적으로 사용됨
+1084_C_solution_20,1084_C,The Fair Nut and String,solution_20,20,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,REVIEW_NEEDED,"명시적 DP이지만, 사실상 조합론적 곱셈을 합산 형태로 구현한 것이므로 COMBINATORICS와 밀접함"
+1084_C_solution_20,1084_C,The Fair Nut and String,solution_20,20,MATH,60,,,0,,0,70,,,90,,0,0,,0,,70,0,,,,0,,,,,,,,DP,90,LIKELY_SPECIFIC_ALGORITHM,"DP로 구현되었으나 문제의 본질은 COMBINATORICS이며, DP 전이식이 사실상 조합의 수를 합산하는 과정임"
+336_C_solution_3,336_C,Vasily the Bear and Sequence,solution_3,3,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 인덱스에 대한 역순 탐색이 최적의 v를 찾는 핵심 그리디 전략이며, 다른 구체적인 알고리즘으로 대체되지 않음"
+336_C_solution_3,336_C,Vasily the Bear and Sequence,solution_3,3,BITMASK,90,0,0,,,60,,0,,0,,,,,,50,,,,,,,0,,,,,,,BRUTE_FORCE,60,LIKELY_SPECIFIC_ALGORITHM,BITMASK 자체보다는 비트 단위의 그리디한 선택과 AND 연산의 성질을 이용하는 BIT_MANIPULATION이 핵심임
+336_C_solution_4,336_C,Vasily the Bear and Sequence,solution_4,4,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,최대 v를 찾기 위해 비트를 역순으로 탐색하는 것이 이 문제의 핵심 그리디 선택임
+336_C_solution_4,336_C,Vasily the Bear and Sequence,solution_4,4,BITMASK,90,0,0,,,60,,0,,0,,,,,,50,,,,,,,0,,,,,,,BRUTE_FORCE,60,LIKELY_SPECIFIC_ALGORITHM,"BITMASK 상태 표현보다는 비트 조작(AND, shift)을 통한 값의 성질 분석인 BIT_MANIPULATION이 더 적절함"
+336_C_solution_1,336_C,Vasily the Bear and Sequence,solution_1,1,BITMASK,95,0,0,,,70,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,70,KEEP_ORIGINAL,BITMASK는 상태 표현이 아니라 비트 단위 연산 자체가 핵심인 BIT_MANIPULATION 문제임
+336_C_solution_2,336_C,Vasily the Bear and Sequence,solution_2,2,GREEDY,75,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,가장 큰 v를 찾기 위해 높은 비트부터 확인하는 전략은 적절한 그리디 접근임
+336_C_solution_2,336_C,Vasily the Bear and Sequence,solution_2,2,BITMASK,95,0,0,,,60,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,비트 마스킹 상태 관리가 아니라 단순 비트 연산 문제임
+336_C_solution_5,336_C,Vasily the Bear and Sequence,solution_5,5,GREEDY,80,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 위치를 결정하는 그리디한 선택이 핵심이며, 다른 구체적인 자료구조나 알고리즘이 개입하지 않음"
+336_C_solution_6,336_C,Vasily the Bear and Sequence,solution_6,6,GREEDY,80,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"최적의 비트 위치를 찾는 단순 그리디 전략으로, 다른 특정 알고리즘이 필요하지 않음"
+336_C_solution_7,336_C,Vasily the Bear and Sequence,solution_7,7,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 위치를 하나씩 결정해 나가는 그리디 전략이 적절하며, 다른 구체적인 알고리즘으로 대체되지 않음"
+336_C_solution_7,336_C,Vasily the Bear and Sequence,solution_7,7,BITMASK,95,0,0,,,30,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,KEEP_ORIGINAL,BITMASK/BIT_MANIPULATION 자체가 이 문제의 핵심 해결책이며 다른 복합 알고리즘의 보조 수단이 아님
+336_C_solution_8,336_C,Vasily the Bear and Sequence,solution_8,8,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,비트 위치를 순차적으로 확인하며 최적의 v를 찾는 그리디한 접근이 정답 논리를 결정함
+336_C_solution_8,336_C,Vasily the Bear and Sequence,solution_8,8,BITMASK,95,0,0,,,30,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,KEEP_ORIGINAL,"BIT_MANIPULATION이 풀이의 핵심이며, 다른 알고리즘의 보조 수단이 아님"
+336_C_solution_9,336_C,Vasily the Bear and Sequence,solution_9,9,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,30,0,,,0,0,SORTING,30,KEEP_ORIGINAL,최대 v를 찾기 위해 30부터 0까지 역순으로 확인하는 전략이 명확한 그리디 접근임
+336_C_solution_10,336_C,Vasily the Bear and Sequence,solution_10,10,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,가장 큰 v부터 확인하여 처음 성공한 사례를 선택하는 전형적인 그리디 전략임
+336_C_solution_13,336_C,Vasily the Bear and Sequence,solution_13,13,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 위치를 결정하는 그리디 접근이 적절하며, 다른 구체적인 알고리즘으로 대체될 성격이 아님."
+336_C_solution_13,336_C,Vasily the Bear and Sequence,solution_13,13,BITMASK,95,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,KEEP_ORIGINAL,상태 표현을 위한 마스크가 아니라 개별 숫자의 비트 속성을 이용하는 BIT_MANIPULATION임.
+336_C_solution_14,336_C,Vasily the Bear and Sequence,solution_14,14,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,최적의 v를 찾기 위해 비트를 순회하는 방식이 적절함.
+336_C_solution_14,336_C,Vasily the Bear and Sequence,solution_14,14,BITMASK,95,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,KEEP_ORIGINAL,상태 마스킹이 아니라 개별 원소의 비트 값을 추출하는 BIT_MANIPULATION임.
+336_C_solution_11,336_C,Vasily the Bear and Sequence,solution_11,11,BITMASK,60,0,0,,,60,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,60,KEEP_ORIGINAL,단순 비트 조작(AND)이지 상태를 관리하는 비트마스크 DP/탐색이 아님.
+336_C_solution_12,336_C,Vasily the Bear and Sequence,solution_12,12,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,LIKELY_SPECIFIC_ALGORITHM,"v를 30부터 내려오는 루프 구조가 GREEDY하지만, 실제 정답 여부를 결정하는 핵심 로직은 비트 AND 연산과 LSB 확인(BIT_MANIPULATION)임."
+336_C_solution_12,336_C,Vasily the Bear and Sequence,solution_12,12,BITMASK,60,0,0,,,50,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,50,KEEP_ORIGINAL,상태를 표현하는 비트마스크가 아니라 개별 숫자의 비트 성질을 이용하는 조작임.
+336_C_solution_15,336_C,Vasily the Bear and Sequence,solution_15,15,GREEDY,65,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트를 순회하며 최적해를 찾는 단순 구조로, 다른 구체적인 그리디 알고리즘이 적용되지 않음"
+336_C_solution_15,336_C,Vasily the Bear and Sequence,solution_15,15,BITMASK,95,0,0,,,40,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,단순 상태 표현이 아니라 비트 AND 연산의 결과와 trailing zeros 성질 자체가 문제의 정답 논리를 결정함
+336_C_solution_16,336_C,Vasily the Bear and Sequence,solution_16,16,GREEDY,65,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,비트를 0부터 29까지 순차적으로 확인하며 최댓값을 갱신하는 단순 루프 구조임
+336_C_solution_16,336_C,Vasily the Bear and Sequence,solution_16,16,BITMASK,95,0,0,,,40,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,비트 단위의 AND 연산 결과가 문제의 핵심 조건(beauty)을 결정하므로 BITMASK가 가장 적절함
+336_C_solution_19,336_C,Vasily the Bear and Sequence,solution_19,19,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"높은 비트부터 결정하는 그리디 전략이 문제의 정답 논리를 결정하며, 다른 특정 알고리즘의 필요성이 없음"
+336_C_solution_19,336_C,Vasily the Bear and Sequence,solution_19,19,BITMASK,90,0,0,,,40,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,LIKELY_SPECIFIC_ALGORITHM,"BITMASK 자체보다는 비트 연산(AND, Shift)을 통한 성질 이용인 BIT_MANIPULATION이 더 정확한 설명임"
+336_C_solution_20,336_C,Vasily the Bear and Sequence,solution_20,20,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,높은 비트부터 결정하는 그리디 전략이 핵심임
+336_C_solution_20,336_C,Vasily the Bear and Sequence,solution_20,20,BITMASK,90,0,0,,,40,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,LIKELY_SPECIFIC_ALGORITHM,"비트 조작(AND, Shift)이 핵심인 BIT_MANIPULATION으로 분류"
+126_B_solution_3,126_B,Password,solution_3,3,DP,65,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"LPS 배열 구축 과정이 DP 기반이지만, 이는 KMP 알고리즘의 일부로 보는 것이 더 적절함"
+336_C_solution_17,336_C,Vasily the Bear and Sequence,solution_17,17,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 설정 여부에 따른 전체 선택이라는 그리디 전략이 명확하며, 다른 구체적 알고리즘으로 대체되지 않음"
+336_C_solution_18,336_C,Vasily the Bear and Sequence,solution_18,18,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,특정 비트 설정 기반의 전체 선택 전략이 최적해를 보장하는 그리디 접근임
+126_B_solution_9,126_B,Password,solution_9,9,DP,70,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"KMP의 prefix function이 DP 구조를 가지나, 이는 KMP 알고리즘의 표준 구현 방식임"
+126_B_solution_12,126_B,Password,solution_12,12,DP,60,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"KMP의 nex 배열 계산 과정이 DP의 성격을 띠지만, 이는 KMP 알고리즘 자체의 일부임"
+126_B_solution_17,126_B,Password,solution_17,17,DP,60,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"KMP의 pi 배열 계산 방식이 DP의 성격을 띠고 있으나, 이는 KMP 알고리즘의 일부로 보는 것이 타당함"
+126_B_solution_13,126_B,Password,solution_13,13,DP,60,,0,0,0,,,0,0,,0,,,,0,,,,0,,0,,,,,0,0,,,PREFIX_SUM,0,KEEP_ORIGINAL,"KMP의 pi 배열 계산이 DP적 성격을 띠지만, 전체적인 풀이 구조는 KMP 알고리즘의 특수 사례임"
+126_B_solution_14,126_B,Password,solution_14,14,MATH,60,,,90,,0,0,,,0,,0,0,,0,,70,85,,,,0,,,,,,,,BINARY_SEARCH,90,LIKELY_SPECIFIC_ALGORITHM,MATH 태그보다는 구체적으로 STRING_HASHING과 BINARY_SEARCH가 풀이의 핵심 구조를 결정함
+1217_C_solution_9,1217_C,The Number Of Good Substrings,solution_9,9,BITMASK,80,0,0,,,95,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 이진수 값을 표현하는 수단일 뿐, 실제 풀이의 핵심 구조는 제한된 범위의 전수 조사(BRUTE_FORCE)임"
+1217_C_solution_10,1217_C,The Number Of Good Substrings,solution_10,10,BITMASK,70,0,0,,,95,,0,,0,,,,,,40,,,,,,,0,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,"이진수 변환은 수단일 뿐이며, 핵심은 제한된 범위의 전수 조사(BRUTE_FORCE)임"
+1217_C_solution_17,1217_C,The Number Of Good Substrings,solution_17,17,MATH,60,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 성질(이진수 값의 범위)을 이용하지만, 실제 구현의 핵심은 제한된 범위 내의 전수조사이므로 BRUTE_FORCE가 더 적절함"
+1217_C_solution_18,1217_C,The Number Of Good Substrings,solution_18,18,MATH,60,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,수학적 성질을 이용했으나 구현 핵심은 제한된 범위의 브루트포스임
+1217_C_solution_19,1217_C,The Number Of Good Substrings,solution_19,19,MATH,65,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,"단순 이진수-십진수 변환이라는 수학적 성질을 이용하지만, 풀이의 구조적 핵심은 BRUTE_FORCE 탐색임"
+1217_C_solution_20,1217_C,The Number Of Good Substrings,solution_20,20,MATH,65,,,0,,95,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BRUTE_FORCE,95,LIKELY_SPECIFIC_ALGORITHM,"단순 이진수-십진수 변환은 보조 수단이며, 전체 구조는 BRUTE_FORCE임"
+1167_E_solution_7,1167_E,Range Deleting,solution_7,7,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,30,0,,,95,0,TWO_POINTERS,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 선택 과정이 포함되어 있으나, 실제 시간복잡도와 풀이 구조는 TWO_POINTERS의 경계 탐색이 핵심임"
+1366_D_solution_1,1366_D,Two Divisors,solution_1,1,MATH,85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+1366_D_solution_2,1366_D,Two Divisors,solution_2,2,MATH,85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+1366_D_solution_3,1366_D,Two Divisors,solution_3,3,MATH,80,,,0,,0,0,,,0,,30,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,단순 MATH 태그보다 구체적인 NUMBER_THEORY 및 SIEVE 알고리즘이 시간복잡도와 풀이 구조를 결정함
+1366_D_solution_4,1366_D,Two Divisors,solution_4,4,MATH,80,,,0,,0,0,,,0,,30,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,단순 MATH 태그보다 구체적인 NUMBER_THEORY 및 SIEVE 알고리즘이 시간복잡도와 풀이 구조를 결정함
+1366_D_solution_5,1366_D,Two Divisors,solution_5,5,MATH,85,,,0,,0,0,,,0,,30,0,,0,,0,0,,,,100,,,,,,,,SIEVE,100,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다는 SIEVE와 NUMBER_THEORY의 구체적인 성질(소인수 분해)을 이용한 풀이임
+1366_D_solution_6,1366_D,Two Divisors,solution_6,6,MATH,85,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,100,,,,,,,,SIEVE,100,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다는 선형 체(Linear Sieve)와 소인수 분해라는 구체적인 Number Theory 기법이 핵심임
+1167_E_solution_19,1167_E,Range Deleting,solution_19,19,GREEDY,65,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,95,0,TWO_POINTERS,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 선택으로 r를 결정하지만, l과 r의 관계를 이용한 TWO_POINTERS 구조가 더 구체적인 설명임"
+1167_E_solution_20,1167_E,Range Deleting,solution_20,20,GREEDY,65,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,95,0,TWO_POINTERS,95,LIKELY_SPECIFIC_ALGORITHM,"최적의 r를 탐색하는 과정이 Greedy하지만, 전형적인 Two Pointers 구조로 분석됨"
+1366_D_solution_7,1366_D,Two Divisors,solution_7,7,MATH,95,,,0,,0,0,,,0,,20,0,,0,,0,0,,,,80,,,,,,,,SIEVE,80,LIKELY_SPECIFIC_ALGORITHM,MATH 태그보다 더 구체적인 NUMBER_THEORY 및 SIEVE가 핵심임
+1366_D_solution_8,1366_D,Two Divisors,solution_8,8,MATH,95,,,0,,0,0,,,0,,40,0,,0,,0,0,,,,85,,,,,,,,SIEVE,85,LIKELY_SPECIFIC_ALGORITHM,"단순 MATH보다 NUMBER_THEORY, SIEVE, GCD_LCM 등 구체적인 알고리즘들이 결합되어 작동함"
+1366_D_solution_9,1366_D,Two Divisors,solution_9,9,MATH,85,,,0,,0,0,,,0,,40,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다 NUMBER_THEORY와 SIEVE라는 구체적인 알고리즘이 풀이의 핵심을 더 정확히 설명함
+1366_D_solution_10,1366_D,Two Divisors,solution_10,10,MATH,85,,,0,,0,0,,,0,,0,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,MATH라는 일반적인 태그보다 NUMBER_THEORY 및 SIEVE가 훨씬 구체적이고 정확한 분류임
+1366_D_solution_11,1366_D,Two Divisors,solution_11,11,MATH,80,,,0,,0,0,,,0,,20,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다 소인수 분해를 위한 SIEVE와 NUMBER_THEORY가 더 구체적이고 핵심적인 알고리즘임
+1366_D_solution_12,1366_D,Two Divisors,solution_12,12,MATH,80,,,0,,0,0,,,0,,10,0,,0,,0,0,,,,90,,,,,,,,SIEVE,90,LIKELY_SPECIFIC_ALGORITHM,MATH라는 일반적인 태그보다 SIEVE와 NUMBER_THEORY가 풀이의 시간복잡도와 논리를 결정하는 핵심 알고리즘임
+1366_D_solution_15,1366_D,Two Divisors,solution_15,15,MATH,95,,,0,,0,0,,,0,,40,0,,0,,0,0,,,,98,,,,,,,,SIEVE,98,LIKELY_SPECIFIC_ALGORITHM,넓은 의미의 MATH보다 SIEVE와 NUMBER_THEORY(소인수 분해)라는 구체적인 기법이 핵심임
+1366_D_solution_16,1366_D,Two Divisors,solution_16,16,MATH,95,,,0,,0,0,,,0,,30,0,,0,,0,0,,,,98,,,,,,,,SIEVE,98,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다 SIEVE를 이용한 소인수 분해(NUMBER_THEORY)라는 구체적인 알고리즘이 핵심임
+1366_D_solution_17,1366_D,Two Divisors,solution_17,17,MATH,90,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+1366_D_solution_18,1366_D,Two Divisors,solution_18,18,MATH,90,,,,,,,,,,,,,,,,,,,,,,,,,,,,,GCD_LCM,0,KEEP_ORIGINAL,
+1366_D_solution_19,1366_D,Two Divisors,solution_19,19,MATH,85,,,0,,0,0,,,0,,10,0,,0,,0,0,,,,100,,,,,,,,SIEVE,100,LIKELY_SPECIFIC_ALGORITHM,단순 MATH보다는 SIEVE를 이용한 NUMBER_THEORY 풀이가 훨씬 구체적이고 핵심적임
+1366_D_solution_20,1366_D,Two Divisors,solution_20,20,MATH,85,,,0,,0,0,,,0,,10,0,,0,,0,0,,,,100,,,,,,,,SIEVE,100,LIKELY_SPECIFIC_ALGORITHM,일반적인 MATH보다 SIEVE와 NUMBER_THEORY의 소인수 분해 원리가 풀이의 핵심임
+1554_C_solution_3,1554_C,Mikasa,solution_3,3,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,MSB부터 최적의 선택을 하는 전형적인 비트 그리디 풀이임
+1554_C_solution_3,1554_C,Mikasa,solution_3,3,MATH,70,,,0,,0,0,,,0,,0,0,,90,,0,0,,,,0,,,,,,,,GREEDY,90,KEEP_ORIGINAL,XOR의 수학적 성질을 이용한 그리디 풀이이므로 MATH 태그가 적절함
+1554_C_solution_4,1554_C,Mikasa,solution_4,4,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,상위 비트부터 최적의 x를 결정하는 그리디 전략임
+1554_C_solution_4,1554_C,Mikasa,solution_4,4,MATH,70,,,0,,0,0,,,0,,0,0,,90,,0,0,,,,0,,,,,,,,GREEDY,90,KEEP_ORIGINAL,XOR 연산의 비트별 독립성과 수학적 성질을 이용한 풀이임
+1554_C_solution_1,1554_C,Mikasa,solution_1,1,GREEDY,85,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,"비트 위치별 최적 선택을 수행하는 전형적인 비트 그리디 풀이이며, 다른 구체적인 알고리즘이 핵심을 대체하지 않음"
+1554_C_solution_1,1554_C,Mikasa,solution_1,1,BITMASK,70,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,BITMASK라는 넓은 태그보다 BIT_MANIPULATION이라는 구체적인 비트 조작 기법이 풀이의 핵심임
+1554_C_solution_2,1554_C,Mikasa,solution_2,2,GREEDY,85,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,"상위 비트부터 최소값을 결정하는 그리디 전략이 비트 조작과 결합된 형태이며, 다른 대체 알고리즘이 없음"
+1554_C_solution_2,1554_C,Mikasa,solution_2,2,BITMASK,70,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,단순 비트마스크(집합 표현)가 아니라 비트 단위 조작 및 생성 논리가 핵심이므로 BIT_MANIPULATION이 더 적절함
+1554_C_solution_5,1554_C,Mikasa,solution_5,5,GREEDY,80,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,비트 단위의 최적 선택이 전체 최적해를 보장하는 전형적인 비트 그리디 문제임
+1554_C_solution_5,1554_C,Mikasa,solution_5,5,BITMASK,70,0,0,,,0,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,BITMASK는 상태 표현이 아니라 XOR 연산의 비트 단위 특성을 이용한 풀이임
+1554_C_solution_6,1554_C,Mikasa,solution_6,6,GREEDY,85,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,상위 비트부터 결정하는 그리디 방식이 최적해를 찾는 가장 직접적인 방법임
+1554_C_solution_6,1554_C,Mikasa,solution_6,6,BITMASK,75,0,0,,,0,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,BITMASK는 상태 표현이 아닌 비트별 연산의 성질을 활용한 것임
+1554_C_solution_7,1554_C,Mikasa,solution_7,7,GREEDY,95,,,30,,,,,,0,0,,,0,,,,30,,0,0,,,0,0,,,0,0,BINARY_SEARCH,30,KEEP_ORIGINAL,"비트별 최적 선택을 수행하는 전형적인 그리디 구조이며, 다른 후보 알고리즘이 핵심 구조를 대체하지 않음"
+1554_C_solution_7,1554_C,Mikasa,solution_7,7,MATH,60,,,0,,0,0,,,0,,0,0,,95,,0,0,,,,0,,,,,,,,GREEDY,95,KEEP_ORIGINAL,"XOR 연산 성질을 이용한 수학적 접근이 포함되어 있으나, 전체 구조는 그리디 탐색임"
+1554_C_solution_8,1554_C,Mikasa,solution_8,8,GREEDY,90,,,30,,,,,,0,0,,,0,,,,30,,0,0,,,0,0,,,0,0,BINARY_SEARCH,30,KEEP_ORIGINAL,비트 단위로 최적의 값을 결정해 나가는 그리디 전략이 명확함
+1554_C_solution_8,1554_C,Mikasa,solution_8,8,MATH,60,,,0,,0,0,,,0,,0,0,,90,,0,0,,,,0,,,,,,,,GREEDY,90,KEEP_ORIGINAL,"XOR의 수학적 성질을 이용하고 있으나, 전체적인 풀이 구조는 그리디함"
+1554_C_solution_9,1554_C,Mikasa,solution_9,9,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 단위로 최솟값을 결정하는 그리디 방식이 적절하며, 다른 특정 알고리즘으로 대체되지 않음."
+1554_C_solution_9,1554_C,Mikasa,solution_9,9,BITMASK,95,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,단순한 상태 마스킹이 아니라 비트 연산 자체를 이용한 값 생성(BIT_MANIPULATION)이 핵심임.
+1554_C_solution_10,1554_C,Mikasa,solution_10,10,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"최상위 비트부터 최적의 선택을 내려가는 그리디 전략이 핵심이며, 다른 구체적인 알고리즘으로 대체되지 않음."
+1554_C_solution_10,1554_C,Mikasa,solution_10,10,BITMASK,95,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,상태 표현을 위한 마스킹이 아니라 비트 연산 자체를 통한 값 최적화(BIT_MANIPULATION)가 핵심임.
+1554_C_solution_13,1554_C,Mikasa,solution_13,13,GREEDY,95,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,LIKELY_SPECIFIC_ALGORITHM,"그리디하게 선택하지만, 그 선택의 근거가 비트 연산의 성질(XOR)에 완전히 의존하므로 BIT_MANIPULATION이 더 구체적인 핵심 알고리즘임"
+1554_C_solution_13,1554_C,Mikasa,solution_13,13,BITMASK,90,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,부분집합을 표현하는 BITMASK보다는 비트 단위 조작인 BIT_MANIPULATION이 더 정확한 표현임
+1554_C_solution_14,1554_C,Mikasa,solution_14,14,GREEDY,95,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,LIKELY_SPECIFIC_ALGORITHM,비트 연산 결과의 단조성을 이용하여 그리디하게 결정하므로 BIT_MANIPULATION이 더 핵심적인 분류임
+1554_C_solution_14,1554_C,Mikasa,solution_14,14,BITMASK,90,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,비트셋 관리보다는 비트 연산자(^)의 성질을 이용한 계산이므로 BIT_MANIPULATION이 적절함
+1366_D_solution_13,1366_D,Two Divisors,solution_13,13,MATH,85,,,0,,0,0,,,0,,40,0,,0,,0,0,,,,100,,,,,,,,SIEVE,100,LIKELY_SPECIFIC_ALGORITHM,MATH/NUMBER_THEORY 범주 내에서 SPF 배열을 생성하는 SIEVE 기법이 시간복잡도와 코드 구조를 결정하는 핵심임
+1366_D_solution_14,1366_D,Two Divisors,solution_14,14,MATH,85,,,0,,0,0,,,0,,40,0,,0,,0,0,,,,60,,,,,,,,SIEVE,60,KEEP_ORIGINAL,Trial Division과 소수 전처리를 통한 수론적 풀이가 적절함
+1554_C_solution_11,1554_C,Mikasa,solution_11,11,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"비트 단위 결정 과정이 그리디하지만, 이는 비트 조작의 전형적인 패턴이며 다른 특정 알고리즘으로 대체되지 않음"
+1554_C_solution_12,1554_C,Mikasa,solution_12,12,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,비트 결정 과정이 그리디하지만 이는 비트 연산 문제의 전형적인 구조임
+1554_C_solution_15,1554_C,Mikasa,solution_15,15,GREEDY,90,,,20,,,,,,0,0,,,0,,,,20,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,"비트 단위 결정 과정이 전형적인 그리디 전략이며, 다른 구체적인 알고리즘으로 대체되지 않음"
+1554_C_solution_15,1554_C,Mikasa,solution_15,15,BITMASK,95,0,0,,,0,,0,,0,,,,,,60,,,,,,,0,,,,,,,MATH,60,LIKELY_SPECIFIC_ALGORITHM,"BITMASK는 상태 표현 방식일 뿐, 실제 핵심은 비트 단위의 그리디한 결정 과정(BIT_MANIPULATION)임"
+1554_C_solution_16,1554_C,Mikasa,solution_16,16,BITMASK,70,0,0,,,0,,0,,0,,,,,,40,,,,,,,0,,,,,,,MATH,40,LIKELY_SPECIFIC_ALGORITHM,단순 비트마스크 표현보다 비트 연산 자체의 성질을 이용하려 함
+818_F_solution_1,818_F,Level Generation,solution_1,1,MATH,80,,,70,,0,0,,,0,,0,0,,0,,0,95,,,,0,,,,,,,,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 성질을 이용하지만, 이를 통해 답을 찾는 전체 제어 구조는 Parametric Search임"
+818_F_solution_2,818_F,Level Generation,solution_2,2,MATH,95,,,85,,0,80,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,85,KEEP_ORIGINAL,조합론적(Combinatorics) 성질을 이용한 수식 도출이 풀이의 핵심이므로 MATH 분류가 적절함
+1554_C_solution_17,1554_C,Mikasa,solution_17,17,GREEDY,85,,,20,,,,,,0,0,,,0,,,,10,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,"비트 단위 결정 과정이 전형적인 그리디 전략(MSB부터 최선의 선택을 함)을 따르고 있으며, 다른 구체적 알고리즘으로 대체되지 않음"
+1554_C_solution_18,1554_C,Mikasa,solution_18,18,GREEDY,85,,,20,,,,,,0,0,,,0,,,,10,,0,0,,,0,0,,,0,0,BINARY_SEARCH,20,KEEP_ORIGINAL,MSB부터 최적의 x 비트를 결정하는 그리디 방식이 정답을 보장하며 가장 효율적인 구조임
+1554_C_solution_19,1554_C,Mikasa,solution_19,19,GREEDY,90,,,40,,,,,,0,0,,,0,,,,40,,0,0,,,0,0,,,0,0,BINARY_SEARCH,40,KEEP_ORIGINAL,"비트 단위 결정 구조가 매우 명확한 그리디 풀이이며, 다른 후보 알고리즘이 핵심 구조를 대체하지 않음"
+1554_C_solution_19,1554_C,Mikasa,solution_19,19,BITMASK,95,0,0,,,0,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,상태 표현으로서의 비트마스크가 아니라 비트 연산 자체의 성질을 이용한 문제이므로 BITMASK/BIT_MANIPULATION이 적절함
+1554_C_solution_20,1554_C,Mikasa,solution_20,20,GREEDY,90,,,40,,,,,,0,0,,,0,,,,40,,0,0,,,0,0,,,0,0,BINARY_SEARCH,40,KEEP_ORIGINAL,상위 비트부터 결정하는 그리디 전략이 문제 해결의 핵심이며 다른 후보가 이를 대체하지 않음
+1554_C_solution_20,1554_C,Mikasa,solution_20,20,BITMASK,95,0,0,,,0,,0,,0,,,,,,50,,,,,,,0,,,,,,,MATH,50,KEEP_ORIGINAL,비트 연산의 성질을 이용한 최적화 문제이므로 BITMASK/BIT_MANIPULATION 분류가 적절함
+818_F_solution_3,818_F,Level Generation,solution_3,3,MATH,100,,,90,,0,70,,,0,,0,0,,0,,0,30,,,,0,,,,,,,,BINARY_SEARCH,90,KEEP_ORIGINAL,조합론적 접근과 이분 탐색이 결합된 전형적인 수학 문제임
+818_F_solution_4,818_F,Level Generation,solution_4,4,MATH,100,,,90,,0,70,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,90,KEEP_ORIGINAL,함수의 단조성/볼록성을 이용한 수학적 최적화 문제임
+818_F_solution_7,818_F,Level Generation,solution_7,7,MATH,95,,,90,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,90,LIKELY_SPECIFIC_ALGORITHM,"MATH 태그가 광범위하지만, 실제 구현은 삼분 탐색(BINARY_SEARCH 범주)을 통한 최적값 찾기가 핵심 제어 구조임"
+818_F_solution_8,818_F,Level Generation,solution_8,8,MATH,95,,,90,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,90,LIKELY_SPECIFIC_ALGORITHM,단순 수학 계산보다 삼분 탐색이라는 구체적인 탐색 기법이 코드의 제어 흐름을 결정함
+818_F_solution_5,818_F,Level Generation,solution_5,5,MATH,100,,,0,,0,50,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,COMBINATORICS,50,KEEP_ORIGINAL,조합(nC2) 공식과 이차 방정식 근사치를 이용한 수학적 풀이가 명확함
+818_F_solution_6,818_F,Level Generation,solution_6,6,MATH,90,,,100,,0,50,,,0,,0,0,,0,,0,80,,,,0,,,,,,,,BINARY_SEARCH,100,LIKELY_SPECIFIC_ALGORITHM,단순 수학 식 계산보다 그 식을 만족하는 x를 찾기 위한 BINARY_SEARCH 구조가 전체 코드의 제어 흐름을 결정함
+818_F_solution_13,818_F,Level Generation,solution_13,13,MATH,85,,,40,,0,80,,,0,,0,0,,0,,0,95,,,,0,,,,,,,,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,단순 수학 문제라기보다 Parametric Search를 통해 최적의 E를 찾는 구조가 지배적임
+818_F_solution_14,818_F,Level Generation,solution_14,14,MATH,95,,,0,,20,80,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,COMBINATORICS,80,KEEP_ORIGINAL,조합론적 접근과 이차 방정식의 해를 이용한 수학적 풀이가 정확하게 적용됨
+818_F_solution_11,818_F,Level Generation,solution_11,11,MATH,80,,,60,,0,0,,,0,,0,0,,0,,0,95,,,,0,,,,,,,,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,단순 MATH라기보다 Parametric Search라는 구체적인 알고리즘 구조가 시간복잡도와 풀이 구조를 결정함
+818_F_solution_12,818_F,Level Generation,solution_12,12,MATH,95,,,75,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,75,KEEP_ORIGINAL,"삼분 탐색 자체가 수학적 최적화 도구이며, 정의한 함수 f(k)의 성질 분석이 핵심이므로 MATH 분류가 적절함"
+1204_D1_solution_1,1204_D1,Kirk and a Binary String (easy version),solution_1,1,GREEDY,95,,,0,,,,,,80,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,80,KEEP_ORIGINAL,"LNDS 길이를 계산하는 DP 요소가 포함되어 있으나, 최종 문자열을 결정하는 핵심 논리는 각 단계에서 0을 선택할 수 있는지 판단하는 그리디 전략임"
+1204_D1_solution_1,1204_D1,Kirk and a Binary String (easy version),solution_1,1,DP,75,,0,0,0,,,0,0,,0,,,,95,,,,0,,0,,,,,0,0,,,GREEDY,95,LIKELY_SPECIFIC_ALGORITHM,"LNDS 길이를 구하는 것은 DP의 일종이나, 문제의 목적(0의 개수 최대화)을 달성하기 위해 이를 이용해 문자열을 재구성하는 과정이 그리디함"
+1204_D1_solution_2,1204_D1,Kirk and a Binary String (easy version),solution_2,2,GREEDY,95,,,0,,,,,,85,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,85,KEEP_ORIGINAL,"DP를 통해 제약 조건을 계산하고, 그 범위 내에서 최적의 선택(0 배치)을 하는 그리디 과정이 핵심임"
+1204_D1_solution_2,1204_D1,Kirk and a Binary String (easy version),solution_2,2,DP,85,,0,0,0,,,0,0,,0,,,,95,,,,0,,0,,,,,0,0,,,GREEDY,95,LIKELY_SPECIFIC_ALGORITHM,"DP는 LNDS 길이를 구하는 도구로 사용되었으며, 문제의 최종 목표인 '0의 개수 최대화'는 그리디한 재구성 단계에서 결정됨"
+818_F_solution_19,818_F,Level Generation,solution_19,19,MATH,85,,,95,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"단순한 수학 공식 적용을 넘어, 함수의 단조성/단봉성을 이용한 탐색 알고리즘(삼분 탐색)이 시간복잡도를 결정함"
+818_F_solution_20,818_F,Level Generation,solution_20,20,MATH,85,,,95,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"단순 수학 식 계산이 아니라, 그 식의 성질(단봉성)을 이용하여 범위를 좁히는 탐색 알고리즘이 풀이의 핵심임"
+818_F_solution_15,818_F,Level Generation,solution_15,15,MATH,85,,,60,,0,70,,,0,,0,0,,0,,0,95,,,,0,,,,,,,,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"MATH 요소가 강하지만, 정답을 찾는 핵심 메커니즘은 PARAMETRIC_SEARCH임"
+818_F_solution_16,818_F,Level Generation,solution_16,16,MATH,85,,,60,,0,70,,,0,,0,0,,0,,0,95,,,,0,,,,,,,,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 공식이 사용되지만, 전체적인 풀이 구조를 결정하는 것은 Parametric Search임"
+818_F_solution_17,818_F,Level Generation,solution_17,17,MATH,85,,,95,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 식 도출이 중요하지만, 실제 구현의 핵심은 단봉 함수의 최댓값을 찾는 삼분 탐색(BINARY_SEARCH 계열)에 있음."
+818_F_solution_18,818_F,Level Generation,solution_18,18,MATH,85,,,95,,0,0,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 모델링이 기반이 되지만, 정답을 도출하는 핵심 제어 구조는 삼분 탐색(BINARY_SEARCH 계열)임."
+818_F_solution_9,818_F,Level Generation,solution_9,9,MATH,85,,,95,,0,30,,,0,,0,0,,0,,0,40,,,,0,,,,,,,,BINARY_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,"수학적 공식 기반 문제이지만, 최적의 k를 찾는 과정이 BINARY_SEARCH로 명확히 구현됨"
+818_F_solution_10,818_F,Level Generation,solution_10,10,MATH,95,,,0,,30,30,,,0,,0,0,,0,,0,0,,,,0,,,,,,,,COMBINATORICS,30,KEEP_ORIGINAL,sqrt를 이용한 근 찾기와 2차 식 계산이 풀이의 핵심이므로 MATH가 적절함
+1204_D1_solution_3,1204_D1,Kirk and a Binary String (easy version),solution_3,3,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,95,,,0,0,STACK,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 접근법이지만, 실제 구현의 핵심 구조와 시간복잡도를 결정하는 것은 STACK을 이용한 매칭 프로세스임"
+1204_D1_solution_4,1204_D1,Kirk and a Binary String (easy version),solution_4,4,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,0,,0,,,,,0,0,,,GREEDY,40,KEEP_ORIGINAL,명확한 DP 상태 정의와 점화식이 존재함
+1204_D1_solution_5,1204_D1,Kirk and a Binary String (easy version),solution_5,5,GREEDY,60,,,0,,,,,,60,0,,,0,,,,0,,0,90,,,0,0,,,0,0,SEGMENT_TREE,90,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 선택 과정이 있지만, 실제 구현과 시간복잡도를 결정하는 핵심은 세그먼트 트리의 구간 쿼리임"
+1204_D1_solution_5,1204_D1,Kirk and a Binary String (easy version),solution_5,5,DP,60,,0,0,0,,,0,0,,0,,,,60,,,,0,,90,,,,,0,0,,,SEGMENT_TREE,90,LIKELY_SPECIFIC_ALGORITHM,"LIS(DP) 전처리가 포함되어 있으나, 핵심 전이 및 갱신 로직은 세그먼트 트리로 처리됨"
+1204_D1_solution_6,1204_D1,Kirk and a Binary String (easy version),solution_6,6,GREEDY,80,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,95,,,0,0,STACK,95,LIKELY_SPECIFIC_ALGORITHM,"그리디한 매칭 전략을 사용하고 있으나, 이를 구현하는 핵심 도구이자 시간복잡도를 결정하는 요소는 스택임"
+1204_D1_solution_7,1204_D1,Kirk and a Binary String (easy version),solution_7,7,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,85,,,0,0,STACK,85,KEEP_ORIGINAL,"스택을 사용한 매칭 자체가 그리디하게 최적의 '0' 변환 위치를 찾는 과정이며, 다른 특정 알고리즘으로 대체될 성격이 아님."
+1204_D1_solution_8,1204_D1,Kirk and a Binary String (easy version),solution_8,8,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,0,,,0,0,SORTING,0,KEEP_ORIGINAL,"단순 카운팅 기반의 그리디 선택으로, 다른 특정 알고리즘의 전형적인 형태가 아님."
+1204_D1_solution_9,1204_D1,Kirk and a Binary String (easy version),solution_9,9,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,90,,,0,0,STACK,90,KEEP_ORIGINAL,스택을 이용한 매칭 자체가 그리디한 최적 선택을 수행하는 핵심 구조임
+1204_D1_solution_10,1204_D1,Kirk and a Binary String (easy version),solution_10,10,GREEDY,95,,,0,,,,,,10,0,,,0,,,,0,,0,0,,,0,40,,,0,0,STACK,40,KEEP_ORIGINAL,논리적으로는 스택 매칭과 동일한 그리디 전략을 수행하고 있음
+1204_D1_solution_13,1204_D1,Kirk and a Binary String (easy version),solution_13,13,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,50,,,0,0,STACK,50,KEEP_ORIGINAL,"전형적인 그리디 매칭 문제이며, 스택 구조를 변수로 대체하여 구현함. 다른 구체적인 알고리즘으로 대체될 성격이 아님."
+1204_D1_solution_14,1204_D1,Kirk and a Binary String (easy version),solution_14,14,DP,90,,0,0,0,,,0,0,,0,,,,40,,,,70,,0,,,,,0,0,,,PREFIX_SUM,70,REVIEW_NEEDED,"PREFIX_SUM(zcounts, ocounts)이 DP 전이 과정에서 중요한 보조 수단으로 사용됨. 단순 DP보다는 누적 합과 결합된 형태임."
+1204_D1_solution_15,1204_D1,Kirk and a Binary String (easy version),solution_15,15,GREEDY,90,,,0,,,,,,60,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,60,KEEP_ORIGINAL,"LNDS의 성질을 이용해 0의 개수를 최대화하는 그리디 선택이 핵심이며, DP는 보조적인 길이 계산 수단으로 사용됨"
+1204_D1_solution_15,1204_D1,Kirk and a Binary String (easy version),solution_15,15,DP,60,,0,0,0,,,0,0,,0,,,,90,,,,85,,0,,,,,0,0,,,GREEDY,90,REVIEW_NEEDED,"DP 점수(60)가 높지만, 실제 구현은 누적합과 수식 기반의 그리디 결정에 더 가깝음"
+1204_D1_solution_16,1204_D1,Kirk and a Binary String (easy version),solution_16,16,DP,95,,0,0,0,,,0,0,,0,,,,40,,,,0,,0,,,,,0,0,,,GREEDY,40,KEEP_ORIGINAL,"명확한 상태 정의와 점화식이 존재하며, LIS/LNDS 계열의 전형적인 DP 구조임"
+1204_D1_solution_12,1204_D1,Kirk and a Binary String (easy version),solution_12,12,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,95,,,0,0,STACK,95,LIKELY_SPECIFIC_ALGORITHM,"GREEDY한 관찰이 핵심이지만, 구현상 STACK을 통한 매칭 구조가 시간복잡도와 풀이 구조를 직접적으로 결정함"
+1204_D1_solution_17,1204_D1,Kirk and a Binary String (easy version),solution_17,17,GREEDY,85,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,30,,,40,0,TWO_POINTERS,40,KEEP_ORIGINAL,"기본적인 아이디어는 그리디 매칭이 맞으며, 다른 구체적인 알고리즘(세그먼트 트리 등)이 개입되지 않음"
+1204_D1_solution_18,1204_D1,Kirk and a Binary String (easy version),solution_18,18,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,0,80,,,0,0,STACK,80,KEEP_ORIGINAL,"매칭 기반의 그리디 풀이가 최적이며, STACK은 이를 구현하는 수단임"
+257_A_solution_1,257_A,Sockets,solution_1,1,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬이 핵심적인 역할을 하지만, 이는 그리디 선택을 위한 수단이며 문제의 본질적인 풀이 구조는 그리디임"
+257_A_solution_2,257_A,Sockets,solution_2,2,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬은 그리디 선택을 위한 도구이며, 문제의 핵심 최적화 전략은 그리디임"
+257_A_solution_3,257_A,Sockets,solution_3,3,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬을 통해 최댓값을 순차적으로 선택하는 전형적인 그리디 문제이며, 정렬 자체가 풀이의 핵심 전략을 구현하는 수단임"
+257_A_solution_4,257_A,Sockets,solution_4,4,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,내림차순 정렬을 통한 최적 선택 과정이 명확한 그리디 구조임
+1204_D1_solution_19,1204_D1,Kirk and a Binary String (easy version),solution_19,19,GREEDY,85,,,0,,,,,,40,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,40,KEEP_ORIGINAL,구조적으로 매 순간의 최선(0으로 변경 가능 여부)을 선택하는 그리디 방식이 핵심임
+1204_D1_solution_20,1204_D1,Kirk and a Binary String (easy version),solution_20,20,GREEDY,75,,,0,,,,,,90,0,,,0,,,,0,,0,0,,,0,0,,,0,0,DP,90,LIKELY_SPECIFIC_ALGORITHM,"그리디하게 문자열을 구성하지만, 그 판단 근거가 되는 LNDS 값의 계산이 DP로 이루어지며 이 부분이 시간복잡도와 정답 논리의 핵심임"
+1204_D1_solution_20,1204_D1,Kirk and a Binary String (easy version),solution_20,20,DP,90,,0,0,0,,,0,0,,0,,,,75,,,,30,,0,,,,,0,0,,,GREEDY,75,KEEP_ORIGINAL,구간별 LNDS 계산을 위한 2차원 DP 구조가 명확함
+257_A_solution_5,257_A,Sockets,solution_5,5,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"가장 큰 소켓 수를 가진 필터를 선택하는 그리디 전략이 최적해를 보장하며, 이를 위해 정렬을 사용하는 구조가 명확함"
+257_A_solution_6,257_A,Sockets,solution_6,6,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"가장 큰 소켓 수를 가진 필터를 선택하는 그리디 전략이 최적해를 보장하며, 이를 위해 정렬을 사용하는 구조가 명확함"
+257_A_solution_13,257_A,Sockets,solution_13,13,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬이 사용되었으나 이는 그리디 선택을 위한 수단이며, 전체적인 풀이 논리는 그리디함."
+257_A_solution_14,257_A,Sockets,solution_14,14,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬은 그리디를 구현하기 위한 도구이며, 핵심은 최적의 선택을 반복하는 그리디 알고리즘임."
+257_A_solution_7,257_A,Sockets,solution_7,7,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬이 사용되었으나, 이는 그리디 선택을 위한 수단이며 문제의 본질은 매 순간 최적의 필터를 선택하는 그리디 전략에 있음"
+257_A_solution_8,257_A,Sockets,solution_8,8,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,정렬을 통해 그리디 선택지를 확보하는 구조이므로 GREEDY가 적절함
+257_A_solution_11,257_A,Sockets,solution_11,11,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬 기준이 풀이의 핵심이며, 가장 큰 값을 우선 선택하는 그리디 전략이 시간복잡도와 정답 논리를 모두 결정함"
+257_A_solution_12,257_A,Sockets,solution_12,12,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,30,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬을 통한 최댓값 우선 선택 전략이 풀이의 핵심이며, 이를 통해 시간복잡도를 최적화함"
+257_A_solution_9,257_A,Sockets,solution_9,9,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,75,0,,,0,0,SORTING,75,KEEP_ORIGINAL,"정렬을 사용하지만, 핵심 논리는 '가장 큰 것을 먼저 선택한다'는 그리디 전략에 기반함"
+257_A_solution_10,257_A,Sockets,solution_10,10,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,75,0,,,0,0,SORTING,75,KEEP_ORIGINAL,"정렬을 통해 최댓값을 빠르게 찾지만, 문제 해결의 핵심은 '최댓값 우선 선택'이라는 그리디 논리임"
+257_A_solution_15,257_A,Sockets,solution_15,15,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,80,0,,,0,0,SORTING,80,KEEP_ORIGINAL,"정렬을 사용하지만, 매 단계에서 최선의 선택을 하는 그리디 전략이 핵심임"
+257_A_solution_16,257_A,Sockets,solution_16,16,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,80,0,,,0,0,SORTING,80,KEEP_ORIGINAL,정렬을 통해 그리디하게 최적의 원소를 선택하는 구조임
+257_A_solution_17,257_A,Sockets,solution_17,17,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬은 그리디 선택을 위한 전처리 과정이며, 매 순간 최선의 선택을 하는 그리디 논리가 핵심임"
+257_A_solution_18,257_A,Sockets,solution_18,18,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬은 그리디 선택을 위한 수단이며, 핵심 로직은 최대 소켓 필터의 우선 선택임"
+257_A_solution_19,257_A,Sockets,solution_19,19,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬을 사용하긴 하지만, 핵심은 '가장 큰 값부터 선택'하는 그리디 전략이며 정렬은 이를 위한 수단임"
+257_A_solution_20,257_A,Sockets,solution_20,20,GREEDY,100,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,최댓값을 계속해서 선택하는 구조가 핵심이므로 그리디가 적절함
+1041_C_solution_1,1041_C,Coffee Break,solution_1,1,GREEDY,95,,,70,,,,,,0,0,,,0,,,,0,,0,0,,,60,0,,,0,0,BINARY_SEARCH,70,LIKELY_SPECIFIC_ALGORITHM,"그리디 전략이 핵심이지만, 다음 시간대를 찾는 과정에서 Binary Search(Bound Search)가 시간복잡도를 결정하는 필수 요소임"
+1041_C_solution_2,1041_C,Coffee Break,solution_2,2,GREEDY,95,,,80,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,0,0,BINARY_SEARCH,80,LIKELY_SPECIFIC_ALGORITHM,그리디한 선택을 위해 정렬된 상태의 데이터에서 이분 탐색(lower_bound)을 수행하는 것이 시간복잡도 O(N log N)을 결정하는 핵심 기법임
+1041_C_solution_3,1041_C,Coffee Break,solution_3,3,GREEDY,60,,,40,,,,,,0,0,,,0,,,,95,,0,0,,,80,0,,,0,0,PARAMETRIC_SEARCH,95,LIKELY_SPECIFIC_ALGORITHM,GREEDY한 검증 방식보다 전체 구조를 결정하는 PARAMETRIC_SEARCH의 비중이 훨씬 높음
+1041_C_solution_4,1041_C,Coffee Break,solution_4,4,GREEDY,100,,,30,,,,,,0,0,,,0,,,,0,,0,0,,,60,0,,,0,0,SORTING,60,KEEP_ORIGINAL,"가장 이른 시간을 선택하는 그리디 전략이 문제의 최적해를 보장하며, 이를 구현하기 위한 수단으로 lower_bound가 사용됨"
+1041_C_solution_7,1041_C,Coffee Break,solution_7,7,GREEDY,95,,,70,,,,,,0,0,,,0,,,,0,,0,0,,,40,0,,,0,0,BINARY_SEARCH,70,KEEP_ORIGINAL,"BINARY_SEARCH(BOUND_SEARCH)가 사용되었으나 이는 그리디하게 다음 요소를 찾기 위한 도구일 뿐, 문제의 핵심 논리는 그리디 선택에 있다."
+1041_C_solution_8,1041_C,Coffee Break,solution_8,8,GREEDY,95,,,70,,,,,,0,0,,,0,,,,0,,0,0,,,40,0,,,0,0,BINARY_SEARCH,70,KEEP_ORIGINAL,"TreeSet을 통한 이진 탐색은 그리디하게 다음 요소를 찾기 위한 효율적인 수단이며, 풀이의 핵심은 그리디 선택에 있다."
+1041_C_solution_11,1041_C,Coffee Break,solution_11,11,GREEDY,95,,,85,,,,,,0,0,,,0,,,,0,,0,0,,,60,0,,,0,0,BINARY_SEARCH,85,KEEP_ORIGINAL,"그리디 전략이 핵심이며, 이분 탐색(BINARY_SEARCH)은 이를 효율적으로 구현하기 위한 수단으로 사용됨. 다른 구체적인 알고리즘으로 대체될 성격이 아님."
+1041_C_solution_12,1041_C,Coffee Break,solution_12,12,GREEDY,95,,,85,,,,,,0,0,,,0,,,,0,,40,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"정렬과 이분 탐색이 필수적이지만, 이를 통해 최적의 날짜를 선택하는 그리디 논리가 문제 풀이의 핵심임."
+1041_C_solution_5,1041_C,Coffee Break,solution_5,5,GREEDY,95,,,85,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,20,0,BINARY_SEARCH,85,KEEP_ORIGINAL,"전략의 핵심은 그리디 선택이며, BINARY_SEARCH는 그 선택을 효율적으로 수행하기 위한 도구로 사용됨."
+1041_C_solution_6,1041_C,Coffee Break,solution_6,6,GREEDY,95,,,85,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,20,0,BINARY_SEARCH,85,KEEP_ORIGINAL,"전략의 핵심은 그리디 선택이며, binary search (TreeSet.higher)는 탐색 최적화 도구임."
+1041_C_solution_9,1041_C,Coffee Break,solution_9,9,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,70,0,SORTING,95,KEEP_ORIGINAL,"정렬이 필수적이지만, 정렬 후 매 순간 최선의 선택을 하는 그리디 논리가 문제 해결의 핵심임"
+1041_C_solution_10,1041_C,Coffee Break,solution_10,10,GREEDY,90,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,95,0,,,0,0,SORTING,95,KEEP_ORIGINAL,"정렬은 전처리이며, 매 순간 최적의 날짜를 선택해 배정하는 그리디 전략이 핵심임"
+1041_C_solution_13,1041_C,Coffee Break,solution_13,13,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,40,0,,,90,0,,,0,0,SORTING,90,KEEP_ORIGINAL,"그리디 전략이 핵심이며, 이를 구현하기 위한 도구로 TreeSet(Bound Search)과 정렬이 사용됨. 대체할 구체적 알고리즘이 없음"
+1041_C_solution_14,1041_C,Coffee Break,solution_14,14,GREEDY,80,,,85,,,,,,0,0,,,0,,,,0,,0,0,,,90,0,,,0,0,SORTING,90,LIKELY_SPECIFIC_ALGORITHM,"그리디하게 날짜를 채우는 방식이지만, 그 과정에서 다음 위치를 찾는 핵심 수단이 직접 구현한 이분 탐색(BINARY_SEARCH)임"
+1041_C_solution_19,1041_C,Coffee Break,solution_19,19,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+1041_C_solution_20,1041_C,Coffee Break,solution_20,20,GREEDY,95,,,,,,,,,,,,,,,,,,,,,,,,,,,,,SORTING,0,KEEP_ORIGINAL,
+1041_C_solution_15,1041_C,Coffee Break,solution_15,15,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,95,0,,,80,0,,,0,0,PRIORITY_QUEUE,95,KEEP_ORIGINAL,"PriorityQueue를 사용하고 있으나, 이는 매 순간 최솟값을 찾아 그리디하게 선택하기 위한 도구이며, 전체적인 구조는 전형적인 그리디 알고리즘이다."
+1041_C_solution_16,1041_C,Coffee Break,solution_16,16,GREEDY,95,,,70,,,,,,0,0,,,0,,,,0,,0,0,,,80,0,,,0,0,SORTING,80,KEEP_ORIGINAL,"TreeSet의 higher()를 통한 탐색이 핵심적이지만, 이는 그리디하게 다음 가능한 시간을 찾기 위한 도구이므로 GREEDY가 적절하다."
+1041_C_solution_17,1041_C,Coffee Break,solution_17,17,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,90,0,,,85,0,,,0,0,PRIORITY_QUEUE,90,LIKELY_SPECIFIC_ALGORITHM,단순 그리디를 넘어 set(사실상 priority_queue)을 이용해 매 순간 최적의 날짜를 선택하는 구조가 시간복잡도와 풀이 구조를 결정함
+1041_C_solution_18,1041_C,Coffee Break,solution_18,18,GREEDY,95,,,80,,,,,,0,0,,,0,,,,0,,0,0,,,70,0,,,0,0,BINARY_SEARCH,80,LIKELY_SPECIFIC_ALGORITHM,그리디 선택 과정에서 TreeMap의 ceilingKey(이분 탐색 기반)를 통한 후보 탐색이 핵심적인 시간복잡도 개선 지점임
+1084_C_solution_15,1084_C,The Fair Nut and String,solution_15,15,MATH,80,,,0,,0,95,,,20,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다 COMBINATORICS(조합론)라는 구체적인 알고리즘이 핵심 논리를 정확히 설명함
+1084_C_solution_16,1084_C,The Fair Nut and String,solution_16,16,MATH,80,,,0,,0,95,,,20,,0,0,,0,,70,0,,,,0,,,,,,,,COMBINATORICS,95,LIKELY_SPECIFIC_ALGORITHM,MATH라는 넓은 태그보다 COMBINATORICS가 문제의 정답 논리를 훨씬 구체적으로 설명함
+1084_C_solution_1,1084_C,The Fair Nut and String,solution_1,1,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,20,,0,,,,,0,0,,,PREFIX_SUM,20,KEEP_ORIGINAL,단순 누적합이 아니라 이전 상태(OK)가 다음 상태의 계산에 곱해지는 형태의 DP 전이가 명확합니다.
+1084_C_solution_1,1084_C,The Fair Nut and String,solution_1,1,MATH,70,,,0,,0,85,,,90,,0,0,,0,,50,0,,,,0,,,,,,,,DP,90,REVIEW_NEEDED,"수학적으로는 조합론(Combinatorics) 문제이나, 구현 방식이 전형적인 DP 형태입니다."
+1084_C_solution_2,1084_C,The Fair Nut and String,solution_2,2,DP,90,,0,0,0,,,0,0,,0,,,,0,,,,20,,0,,,,,0,0,,,PREFIX_SUM,20,KEEP_ORIGINAL,상태 변수 cur를 통한 명확한 DP 전이가 존재합니다.
+1084_C_solution_2,1084_C,The Fair Nut and String,solution_2,2,MATH,70,,,0,,0,85,,,90,,0,0,,0,,50,0,,,,0,,,,,,,,DP,90,REVIEW_NEEDED,조합론적 성격이 강하나 구현 방식이 DP입니다.
+845_B_solution_7,845_B,Luba And The Ticket,solution_7,7,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬이 사용되었으나 이는 최적의 선택을 하기 위한 전처리 과정이며, 핵심 논리는 매 순간 최대 이득을 선택하는 그리디 전략임"
+845_B_solution_8,845_B,Luba And The Ticket,solution_8,8,GREEDY,95,,,0,,,,,,0,0,,,0,,,,0,,0,0,,,85,0,,,0,0,SORTING,85,KEEP_ORIGINAL,"정렬이 사용되었으나 이는 그리디 선택을 위한 전처리이며, 전체적인 문제 해결의 핵심은 그리디 전략임"
